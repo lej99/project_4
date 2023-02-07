@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import 'color';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Helvetica Neue,ridi-roboto,"Noto Sans KR",sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $afontColor;
+}
