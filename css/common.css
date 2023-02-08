@@ -5,6 +5,7 @@
   font-family: -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Helvetica Neue, ridi-roboto, "Noto Sans KR", sans-serif;
   font-weight: 400;
   letter-spacing: -0.03em;
+  color: #787878;
 }
 
 ul,
@@ -38,18 +39,18 @@ a {
   display: flex;
 }
 #top_menu_wrap #top_menu ul li a {
-  font-size: 14px;
   font-weight: 900;
+  font-size: 14px;
   padding: 0 10px;
 }
-#top_menu_wrap #top_menu ul li a.selet svg {
+#top_menu_wrap #top_menu ul li a.select svg {
   font-size: 10px;
 }
 #top_menu_wrap #top_menu ul li a.active {
   color: #000;
 }
 #top_menu_wrap #top_menu ul li a:not(.active):hover {
-  color: #bbb;
+  opacity: 0.6;
   transition: all 0.3s;
 }
 #top_menu_wrap #top_menu ul li::after {
@@ -76,6 +77,7 @@ header {
 header .header_logo {
   display: flex;
   height: 40px;
+  padding: 10px 0;
 }
 header .header_logo div {
   padding-left: 6px;
@@ -95,9 +97,6 @@ header nav form {
 header nav form label {
   cursor: pointer;
 }
-header nav form label svg {
-  color: #787878;
-}
 header nav form label input {
   margin-left: 6px;
   outline: none;
@@ -107,9 +106,140 @@ header nav form label input {
 }
 header nav .user_menu {
   display: flex;
+  padding-top: 4px;
 }
 header nav .user_menu li a {
   padding: 0 10px;
-  color: #000;
   font-size: 30px;
+}
+header nav .user_menu li a svg path {
+  color: #000;
+}
+
+#footer_wrap {
+  border-top: 1px solid #e6e6e6;
+}
+#footer_wrap footer {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#footer_wrap footer .info_wrap {
+  width: 55%;
+}
+#footer_wrap footer .info_wrap ul li {
+  font-size: 14px;
+}
+#footer_wrap footer .info_wrap a.active {
+  font-weight: 900;
+}
+#footer_wrap footer .info_wrap a:hover {
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+#footer_wrap footer .info_wrap .footer_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#footer_wrap footer .info_wrap .footer_info .user_info {
+  width: 30%;
+}
+#footer_wrap footer .info_wrap .footer_info .user_info li {
+  margin-bottom: 20px;
+}
+#footer_wrap footer .info_wrap .footer_info .user_info li a {
+  display: inline-flex;
+  align-items: center;
+}
+#footer_wrap footer .info_wrap .footer_info .user_info li a svg {
+  margin-right: 6px;
+}
+#footer_wrap footer .info_wrap .footer_info .footer_menu {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#footer_wrap footer .info_wrap .footer_info .footer_menu h3 {
+  font-weight: 900;
+  font-size: 14px;
+  margin: 5px 0;
+}
+#footer_wrap footer .info_wrap .footer_info .footer_menu li {
+  font-size: 13px;
+  padding: 5px 0;
+}
+#footer_wrap footer .info_wrap .footer_info .footer_menu .company a {
+  display: inline-flex;
+  align-items: center;
+}
+#footer_wrap footer .info_wrap .footer_info .footer_menu .company a svg {
+  font-size: 14px;
+  margin-left: 6px;
+}
+#footer_wrap footer .info_wrap .footer_info .footer_menu .company a svg circle {
+  color: #1E9EFF;
+}
+#footer_wrap footer .info_wrap .ceo_info button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  font-weight: 900;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+#footer_wrap footer .info_wrap .ceo_info button span svg {
+  font-size: 10px;
+  margin-left: 3px;
+  transform: rotate(90deg);
+}
+#footer_wrap footer .info_wrap .ceo_info button span svg.click {
+  transform: rotate(-90deg);
+}
+#footer_wrap footer .info_wrap .ceo_info .ceo_info_hide {
+  font-size: 11px;
+  margin-top: 6px;
+}
+#footer_wrap footer .info_wrap .ceo_info .ceo_info_hide dt,
+#footer_wrap footer .info_wrap .ceo_info .ceo_info_hide dd {
+  display: inline-flex;
+  align-items: center;
+  float: left;
+}
+#footer_wrap footer .info_wrap .ceo_info .ceo_info_hide dd::after {
+  content: " ";
+  display: inline-block;
+  width: 1px;
+  height: 8px;
+  background-color: #e6e6e6;
+  margin-left: 6px;
+}
+#footer_wrap footer .info_wrap .ceo_info .ceo_info_hide dd:nth-child(3n)::after {
+  display: none;
+}
+#footer_wrap footer .sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 14%;
+}
+#footer_wrap footer .sns li a {
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+#footer_wrap footer .sns li a svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

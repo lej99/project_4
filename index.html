@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="css/img/favicon.ico">
     <!-- css -->
     <link rel="stylesheet" href="css/common.css">
+    <!-- js -->
+    <script defer src="./js/common.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                 <li><a href="#">웹소설</a></li>
                 <li><a href="#" class="active">도서</a></li>
                 <li>
-                    <a href="#" class="selet">셀렉트
+                    <a href="#" class="select">셀렉트
                         <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"
                             aria-label="이동">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -44,8 +46,11 @@
         <nav>
             <form role="search">
                 <label>
-                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fig-xh05xe">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.026 9.862a6.163 6.163 0 11-12.327 0 6.163 6.163 0 0112.327 0zm-1.183 5.824a7.663 7.663 0 111-1.031c.066.035.13.08.186.137l5.4 5.4a.75.75 0 01-1.06 1.06l-5.4-5.4a.746.746 0 01-.126-.166z" fill="currentColor"></path>
+                    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="fig-xh05xe">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.026 9.862a6.163 6.163 0 11-12.327 0 6.163 6.163 0 0112.327 0zm-1.183 5.824a7.663 7.663 0 111-1.031c.066.035.13.08.186.137l5.4 5.4a.75.75 0 01-1.06 1.06l-5.4-5.4a.746.746 0 01-.126-.166z"
+                            fill="currentColor"></path>
                     </svg>
                     <input type="text" maxlength="64">
                 </label>
@@ -102,7 +107,117 @@
     </header>
 
     <div id="footer_wrap">
-        <footer></footer>
+        <footer>
+            <div class="info_wrap">
+                <div class="footer_info">
+                    <ul class="user_info">
+                        <li><a href="#" target="_blank" title="고객센터" rel="noreferrer" class="active">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2.07A7.953 7.953 0 004.25 8.25h-.85A2.75 2.75 0 00.648 11v2a2.75 2.75 0 002.75 2.75h1.4a.75.75 0 00.75-.75v-.574a.76.76 0 00.002-.06V10.02a6.45 6.45 0 0112.9 0v4.943a4.909 4.909 0 01-3.829 4.788 2.25 2.25 0 10-.012 1.53 6.411 6.411 0 005.293-5.531h.699a2.75 2.75 0 002.75-2.75v-2a2.75 2.75 0 00-2.75-2.75h-.849a7.953 7.953 0 00-7.752-6.18zM11.25 11a.75.75 0 00-1.5 0v.8a.75.75 0 001.5 0V11zm2.25-.75a.75.75 0 01.75.75v.8a.75.75 0 01-1.5 0V11a.75.75 0 01.75-.75zM11.75 20.5a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.398 9.75c-.69 0-1.25.56-1.25 1.25v2c0 .69.56 1.25 1.25 1.25h.65v-4.5h-.65zM21.852 11c0-.69-.56-1.25-1.25-1.25h-.65v4.5h.65c.69 0 1.25-.56 1.25-1.25v-2z"
+                                        fill="currentColor"></path>
+                                </svg>고객센터
+                            </a>
+                        </li>
+                        <li><a href="#" target="_blank" title="공지사항" rel="noreferrer" class="active">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.75 4.61a1.75 1.75 0 00-2.526-1.568L7.734 6.75H5A1.75 1.75 0 003.25 8.5v7c0 .966.784 1.75 1.75 1.75h2.734l7.49 3.707a1.75 1.75 0 002.526-1.568V4.611zm-1.86-.223a.25.25 0 01.36.224v14.778a.25.25 0 01-.36.224l-7.648-3.785-.157-.078H5a.25.25 0 01-.25-.25v-7A.25.25 0 015 8.25h3.085l.157-.078 7.647-3.785zm5.46 5.914a.75.75 0 00-1.5 0v3.4a.75.75 0 001.5 0v-3.4z"
+                                        fill="currentColor"></path>
+                                </svg>공지사항
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer_menu">
+                        <div class="service">
+                            <h3>서비스</h3>
+                            <ul>
+                                <li><a href="#" rel="noopener noreferrer" target="_blank">리디페이퍼</a></li>
+                                <li><a href="#">제휴카드</a></li>
+                                <li><a href="#">뷰어 다운로드</a></li>
+                                <li><a href="#" rel="noopener noreferrer" target="_blank">CP사이트</a></li>
+                                <li><a href="#" rel="noopener noreferrer" target="_blank">리디셀렉트 B2B</a></li>
+                            </ul>
+                        </div>
+                        <div class="etc">
+                            <h3>기타 문의</h3>
+                            <ul>
+                                <li><a href="#" rel="noopener noreferrer" target="_blank"">콘텐츠 제공 문의</a></li>
+                                <li><a href=" #" rel="noopener noreferrer" target="_blank">사업 제휴 문의</a></li>
+                            </ul>
+                        </div>
+                        <div class="company">
+                            <h3>회사</h3>
+                            <ul>
+                                <li><a href="#" rel="noopener noreferrer" target="_blank">회사 소개</a></li>
+                                <li><a href="#" rel="noopener noreferrer" target="_blank">인재채용
+                                        <svg width="1em" height="1em" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-label="NEW">
+                                            <circle cx="7" cy="7" r="7" fill="currentColor"></circle>
+                                            <path
+                                                d="M9.18 9.798h-.992L5.932 6.302v3.496H4.82V4.102h.992L8.068 7.59V4.102H9.18v5.696z"
+                                                fill="#fff"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="ceo_info">
+                    <button type="button">리디(주) 사업자 정보
+                        <span>
+                            <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M2.534.92a.5.5 0 000 .708l2.871 2.871-2.871 2.872a.5.5 0 00.707.707l3.225-3.225a.5.5 0 000-.707L3.24.92a.5.5 0 00-.707 0z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <dl class="ceo_info_hide">
+                        <dt>대표자</dt><dd>배기식</dd>
+                        <dt>사업자 등록번호</dt><dd>120-87-27435</dd>
+                        <dt>통신판매업 신고번호</dt><dd>제 2009-서울강남 35-02139호</dd>
+                        <dt>이메일</dt><dd>help@ridi.com</dd>
+                        <dt>대표전화</dt><dd>1644-0331</dd>
+                        <dt>주소</dt><dd>서울시 강남구 역삼동 702-28 어반벤치빌딩 10층(테헤란로 325)</dd>
+                    </dl>
+                    <ul>
+                        <li><a href="#" rel="noopener noreferrer" target="_blank">이용약관</a></li>
+                        <li><a href="#" rel="noopener noreferrer" target="_blank" class="active">개인정보 처리방침</a></li>
+                        <li><a href="#" rel="noopener noreferrer" target="_blank">청소년보호정책</a></li>
+                        <li><a href="#" rel="noopener noreferrer" target="_blank">사업자정보확인</a></li>
+                    </ul>
+                    <div><span>©</span>RIDI Corp.</div>
+                </div>
+            </div>
+            <ul class="sns">
+                <li><a href="#" rel="noopener noreferrer" target="_blank" title="페이스북">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.61 13.253l.31-2.33H12.97V9.41c0-.64.282-1.264 1.15-1.264H15v-1.98A8.796 8.796 0 0013.439 6c-1.605 0-2.646 1.123-2.646 3.144v1.78H9v2.329h1.793V18.9c.723.133 1.46.133 2.183 0v-5.647h1.634z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#" rel="noopener noreferrer" target="_blank" title="인스타그램">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.687 6.3H9.314A3.013 3.013 0 006.3 9.313v5.373A3.013 3.013 0 009.314 17.7h5.373a3.013 3.013 0 003.013-3.012V9.313A3.012 3.012 0 0014.687 6.3zm0-1.3H9.314A4.314 4.314 0 005 9.313v5.373A4.313 4.313 0 009.314 19h5.373A4.312 4.312 0 0019 14.688V9.313A4.31 4.31 0 0014.687 5zm1.871 3.28a.937.937 0 11-1.874-.002.937.937 0 011.874.001zM14.2 12a2.2 2.2 0 11-4.4 0 2.2 2.2 0 014.4 0zm1.3 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#" rel="noopener noreferrer" target="_blank" title="유튜브">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.521 16.57A1 1 0 019 15.717V8.283a1 1 0 011.521-.853l6.083 3.717a1 1 0 010 1.706L10.52 16.57z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </div>
 </body>
 

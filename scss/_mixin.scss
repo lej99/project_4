@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@mixin underline() {
+    border-bottom: 1px solid $borderColor;
+}
+
+@mixin overline() {
+    border-top: 1px solid $borderColor;
+}
+
+@mixin circleline() {
+    border: 1px solid $borderColor;
+    border-radius: 50%;
+}
+
+@mixin flexBetween($position: center) {
+    display: flex;
+    justify-content: space-between;
+    align-items: $position;
+}
+
+@mixin flexInline($position: center) {
+    display: inline-flex;
+    align-items: $position;
+}
+
+@mixin center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin fontB {
+    font-weight: 900;
+}
