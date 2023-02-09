@@ -8,8 +8,10 @@
     <title>도서추천 - 리디</title>
     <link rel="shortcut icon" href="css/img/favicon.ico">
     <!-- css -->
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
     <!-- js -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
     <script defer src="./js/common.js"></script>
 </head>
 
@@ -106,13 +108,215 @@
         </nav>
     </header>
 
+    <div class="categories">
+        <ul class="cate1">
+            <li><a href="#" class="books">도서</a></li>
+            <li><a href="#" class="allcate">
+                    <svg width="1em" height="1em" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.52 7.583c0-.448.364-.812.813-.812h17.333a.812.812 0 110 1.625H4.333a.813.813 0 01-.812-.813zM3.52 13c0-.449.364-.813.813-.813h17.333a.812.812 0 110 1.626H4.333A.813.813 0 013.521 13zM3.52 18.417c0-.449.364-.813.813-.813h17.333a.812.812 0 110 1.625H4.333a.813.813 0 01-.812-.812z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <span>전체 카테고리</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="cate2">
+            <li><a href="#" class="recommend">추천</a></li>
+            <li><a href="#" class="event">기획전</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="slide">
+            <div>
+                <a href="#">
+                    <div>
+                        <div>
+                            <img src="" alt="New">
+                            <img src="" alt="10% 할인">
+                        </div>
+                        <h2>AI와 함께하는 미래는 오직 디스토피아뿐?</h2>
+                        <div>
+                            <div><span>&lt;AI 2041&gt; 소장 10% 할인 </span>
+                            </div>
+                            <div><span>1</span><i></i><span>10</span></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="할인">
+                                <img src="" alt="대여">
+                            </div>
+                            <h2>'이게 무슨 뜻이지?' 모국어도 단어장이 필요해</h2>
+                            <div>
+                                <div><span>대여 금액 그대로 쿠폰으로 돌려 받자!</span></div>
+                                <div><span>2</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="할인">
+                            </div>
+                            <h2>2달러만 내시면 전부 알려 드립니다</h2>
+                            <div>
+                                <div><span>내 가장 이상적인 삶을 알게 된다면?</span></div>
+                                <div><span>3</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="Select">
+                            </div>
+                            <h2>더 환호하며, 오늘을 살고 싶어요</h2>
+                            <div>
+                                <div><span>&lt;만일 내가 인생을 다시 산다면&gt;을 읽고</span></div>
+                                <div><span>4</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="할인">
+                                <img src="" alt="세트">
+                            </div>
+                            <h2>20세기 최고의 명작 전권 세트 소장 기회</h2>
+                            <div>
+                                <div><span>&lt;잃어버린 시간을 찾아서&gt; 전권 세트 오픈!</span></div>
+                                <div><span>5</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="Up">
+                                <img src="" alt="Select">
+                            </div>
+                            <h2>리디셀렉트 2월 2주차 입고도서 공개!</h2>
+                            <div>
+                                <div><span>&lt;영화를 빨리 감기로 보는 사람들&gt;입고</span></div>
+                                <div><span>6</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="할인">
+                                <img src="" alt="대여">
+                            </div>
+                            <h2>대문호의 정수를 한 권으로 압축하다</h2>
+                            <div>
+                                <div><span>&lt;디 에센셜&gt; 시리즈 대여 할인 기획전</span></div>
+                                <div><span>7</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="할인">
+                                <img src="" alt="세트">
+                            </div>
+                            <h2>16년간 마루 밑에 잠들어 있던 소녀</h2>
+                            <div>
+                                <div>
+                                    <span>&lt;모방범&gt;후 9년, 미야베 미유키 미스터리 세트</span>
+                                    <div>© 미야베 미유키 / 문학동네<br></div>
+                                </div>
+                                <div><span>8</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="New">
+                                <img src="" alt="10% 할인">
+                            </div>
+                            <h2>&lt;게임주 빅뱅&gt;, &lt;주식은 심리다&gt; 선출간 기념</h2>
+                            <div>
+                                <div><span>베가북스 도서 10% 할인 </span></div>
+                                <div><span>9</span><i></i>
+                                    <span">10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="" alt="할인">.
+                                <img src="" alt="대여">
+                            </div>
+                            <h2>책으로 건강 지키기! 몸과 마음을 위한 책</h2>
+                            <div>
+                                <div><span>&lt;인요가 가이드&gt; 출간 이벤트!</span></div>
+                                <div><span>10</span><i></i><span>10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <div class="slide_btn">
+                    <button type="button" title="이전" class="prev">
+                        <span>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.639 14.23a.7.7 0 010-.99L9.877 8 4.639 2.763a.7.7 0 11.99-.99l5.733 5.733a.7.7 0 010 .99l-5.733 5.733a.7.7 0 01-.99 0z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" title="다음" class="next">
+                        <span>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.639 14.23a.7.7 0 010-.99L9.877 8 4.639 2.763a.7.7 0 11.99-.99l5.733 5.733a.7.7 0 010 .99l-5.733 5.733a.7.7 0 01-.99 0z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <div id="footer_wrap">
         <footer>
             <div class="info_wrap">
                 <div class="footer_info">
                     <ul class="user_info">
                         <li><a href="#" target="_blank" title="고객센터" rel="noreferrer" class="active">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M12 2.07A7.953 7.953 0 004.25 8.25h-.85A2.75 2.75 0 00.648 11v2a2.75 2.75 0 002.75 2.75h1.4a.75.75 0 00.75-.75v-.574a.76.76 0 00.002-.06V10.02a6.45 6.45 0 0112.9 0v4.943a4.909 4.909 0 01-3.829 4.788 2.25 2.25 0 10-.012 1.53 6.411 6.411 0 005.293-5.531h.699a2.75 2.75 0 002.75-2.75v-2a2.75 2.75 0 00-2.75-2.75h-.849a7.953 7.953 0 00-7.752-6.18zM11.25 11a.75.75 0 00-1.5 0v.8a.75.75 0 001.5 0V11zm2.25-.75a.75.75 0 01.75.75v.8a.75.75 0 01-1.5 0V11a.75.75 0 01.75-.75zM11.75 20.5a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.398 9.75c-.69 0-1.25.56-1.25 1.25v2c0 .69.56 1.25 1.25 1.25h.65v-4.5h-.65zM21.852 11c0-.69-.56-1.25-1.25-1.25h-.65v4.5h.65c.69 0 1.25-.56 1.25-1.25v-2z"
                                         fill="currentColor"></path>
@@ -120,7 +324,8 @@
                             </a>
                         </li>
                         <li><a href="#" target="_blank" title="공지사항" rel="noreferrer" class="active">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M17.75 4.61a1.75 1.75 0 00-2.526-1.568L7.734 6.75H5A1.75 1.75 0 003.25 8.5v7c0 .966.784 1.75 1.75 1.75h2.734l7.49 3.707a1.75 1.75 0 002.526-1.568V4.611zm-1.86-.223a.25.25 0 01.36.224v14.778a.25.25 0 01-.36.224l-7.648-3.785-.157-.078H5a.25.25 0 01-.25-.25v-7A.25.25 0 015 8.25h3.085l.157-.078 7.647-3.785zm5.46 5.914a.75.75 0 00-1.5 0v3.4a.75.75 0 001.5 0v-3.4z"
                                         fill="currentColor"></path>
@@ -165,22 +370,29 @@
                     </div>
                 </div>
                 <div class="ceo_info">
-                    <button type="button">리디(주) 사업자 정보
+                    <div class="btn">리디(주) 사업자 정보
                         <span>
-                            <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="1em" height="1em" viewBox="0 0 9 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M2.534.92a.5.5 0 000 .708l2.871 2.871-2.871 2.872a.5.5 0 00.707.707l3.225-3.225a.5.5 0 000-.707L3.24.92a.5.5 0 00-.707 0z"
                                     fill="currentColor"></path>
                             </svg>
                         </span>
-                    </button>
+                    </div>
                     <dl class="ceo_info_hide">
-                        <dt>대표자</dt><dd>배기식</dd>
-                        <dt>사업자 등록번호</dt><dd>120-87-27435</dd>
-                        <dt>통신판매업 신고번호</dt><dd>제 2009-서울강남 35-02139호</dd>
-                        <dt>이메일</dt><dd>help@ridi.com</dd>
-                        <dt>대표전화</dt><dd>1644-0331</dd>
-                        <dt>주소</dt><dd>서울시 강남구 역삼동 702-28 어반벤치빌딩 10층(테헤란로 325)</dd>
+                        <dt>대표자</dt>
+                        <dd>배기식</dd>
+                        <dt>사업자 등록번호</dt>
+                        <dd>120-87-27435</dd>
+                        <dt>통신판매업 신고번호</dt>
+                        <dd>제 2009-서울강남 35-02139호</dd>
+                        <dt>이메일</dt>
+                        <dd>help@ridi.com</dd>
+                        <dt>대표전화</dt>
+                        <dd>1644-0331</dd>
+                        <dt>주소</dt>
+                        <dd>서울시 강남구 역삼동 702-28 어반벤치빌딩 10층(테헤란로 325)</dd>
                     </dl>
                     <ul>
                         <li><a href="#" rel="noopener noreferrer" target="_blank">이용약관</a></li>
@@ -188,7 +400,7 @@
                         <li><a href="#" rel="noopener noreferrer" target="_blank">청소년보호정책</a></li>
                         <li><a href="#" rel="noopener noreferrer" target="_blank">사업자정보확인</a></li>
                     </ul>
-                    <div><span>©</span>RIDI Corp.</div>
+                    <div class="lidicorp"><span>©</span>RIDI Corp.</div>
                 </div>
             </div>
             <ul class="sns">
@@ -217,6 +429,14 @@
                     </a>
                 </li>
             </ul>
+            <button class="top_btn" data-is-hidden="false">
+                <svg width="1em" height="1em" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-label="맨 위로 스크롤">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6.582 13.436a.8.8 0 01-1.164-1.098l9-9.54a.8.8 0 011.164 0l9 9.54a.8.8 0 11-1.164 1.098L15.8 5.36v20.483a.8.8 0 11-1.6 0V5.36l-7.618 8.075z"
+                        fill="currentColor"></path>
+                </svg>
+            </button>
         </footer>
     </div>
 </body>

@@ -11,7 +11,6 @@
         width: 1170px;
         height: 40px;
         margin: 0 auto;
-        padding: 0 18px;
         @include flexBetween;
 
         ul {
@@ -21,7 +20,6 @@
                 a {
                     @include fontB;
                     font-size: 14px;
-                    padding: 0 10px;
                 }
 
                 a.select {
@@ -47,6 +45,7 @@
                 height: 3px;
                 border-radius: 3px;
                 background-color: $borderColor;
+                margin: 0 10px;
             }
 
             li:last-child::after {
@@ -60,7 +59,6 @@ header {
     width: 1170px;
     height: 75px;
     margin: 0 auto;
-    padding: 0 22px;
     @include flexBetween;
 
     .header_logo {
@@ -69,12 +67,12 @@ header {
         padding: 10px 0;
 
         div {
-            padding-left: 6px;
+            padding-right: 6px;
         }
     }
 
     nav {
-        display: flex;
+        @include flexInline;
         height: 40px;
 
         form {
@@ -83,7 +81,6 @@ header {
             border-radius: 8px;
             background-color: #f0f0f0;
             padding: 10px;
-            margin-right: 15px;
 
             label {
                 cursor: pointer;
@@ -99,12 +96,11 @@ header {
         }
 
         .user_menu {
-            display: flex;
-            padding-top: 4px;
+            @include flexInline;
 
             li {
                 a {
-                    padding: 0 10px;
+                    padding-left: 20px;
                     font-size: 30px;
 
                     svg {
@@ -118,13 +114,72 @@ header {
     }
 }
 
+.categories {
+    width: 1170px;
+    margin: 0 auto;
+
+    .cate1 {
+        @include flexBetween;
+        @include underline;
+        height: 60px;
+        
+        .books {
+            color: $lidiColor;
+            font-size: 23px;
+            @include fontB;
+        }
+        .allcate {
+            @include flexInline;
+
+            svg {
+                font-size: 25px;
+                margin-right: 6px;
+                path {
+                    color: $titleFontColor;
+                }
+            }
+
+            span {
+                color: $titleFontColor;
+                font-size: 14px;
+                @include fontB
+            }
+            
+        }
+    }
+
+    .cate2 {
+        @include flexInline;
+        
+        a {
+            line-height: 60px;
+            padding: 7px 10px;
+            margin-right: 10px;
+            @include fontB;
+        }
+        a.recommend {
+            background-color: $lidiColor;
+            border-radius: 30px;
+            color: #fff;
+        }
+        a.event {
+            color: $titleFontColor;
+        }
+
+        a.event:hover {
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+    }
+}
+
 #footer_wrap {
     @include overline;
 
     footer {
         width: 1170px;
         margin: 0 auto;
-        padding: 50px 30px;
+        padding: 40px 0;
         @include flexBetween(flex-start);
 
         .info_wrap {
@@ -198,14 +253,15 @@ header {
             }
 
             .ceo_info {
-                button {
+                padding-top: 50px;
+                .btn {
                     cursor: pointer;
                     border: none;
                     outline: none;
                     background-color: #fff;
                     @include fontB;
                     font-size: 12px;
-                    @include flexInline;
+
                     span {
                         svg {
                             font-size: 10px;
@@ -221,22 +277,48 @@ header {
                 .ceo_info_hide {
                     font-size: 11px;
                     margin-top: 6px;
-                    
-                    dt,
-                    dd {
-                        @include flexInline;
-                        float: left;
+                    @include flexInline;
+                    flex-wrap: wrap;
+
+                    dt {
+                        padding-right: 4px;
                     }
+
+                    dd {
+                        padding: 2px 0;
+                    }
+
                     dd::after {
                         content: " ";
                         display: inline-block;
                         width: 1px;
                         height: 8px;
                         background-color: $borderColor;
-                        margin-left: 6px;
+                        margin: 0 6px;
                     }
-                    dd:nth-child(3n)::after {
-                        display: none;
+                }
+
+                ul {
+                    @include flexInline;
+                    li {
+                    font-size: 11px;
+                    }
+
+                    li::after {
+                        content: " ";
+                        display: inline-block;
+                        width: 1px;
+                        height: 8px;
+                        background-color: $borderColor;
+                        margin: 0 6px;
+                    }
+                }
+
+                .lidicorp {
+                    font-size: 11px;
+                    padding: 10px 0;
+                    span {
+                        padding-right: 3px; 
                     }
                 }
             }
@@ -255,6 +337,26 @@ header {
                     svg {
                         @include center();
                     }
+                }
+            }
+        }
+
+        .top_btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            left: auto;
+            width: 60px;
+            height: 60px;
+            @include circleline();
+            background-color: rgba(#fff, 0.9);
+            cursor: pointer;
+            
+            svg {
+                font-size: 30px;
+
+                path {
+                    color: $titleFontColor;
                 }
             }
         }
