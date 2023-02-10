@@ -13,6 +13,7 @@
     <!-- js -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.2.js"></script>
     <script defer src="./js/common.js"></script>
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -129,182 +130,252 @@
 
     <main>
         <section id="slide">
-            <div>
+            <div class="wrap">
                 <a href="#">
-                    <div>
-                        <div>
-                            <img src="" alt="New">
-                            <img src="" alt="10% 할인">
-                        </div>
-                        <h2>AI와 함께하는 미래는 오직 디스토피아뿐?</h2>
-                        <div>
-                            <div><span>&lt;AI 2041&gt; 소장 10% 할인 </span>
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_1.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(to bottom, rgba(177, 0, 110, 0), rgba(177, 0, 110, 1)),linear-gradient(to bottom, rgba(177, 0, 110, 0), rgba(177, 0, 110, 1))">
                             </div>
-                            <div><span>1</span><i></i><span>10</span></div>
                         </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="할인">
-                                <img src="" alt="대여">
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/new.png" alt="New">
+                                <img src="./css/img/discount_10.png" alt="10% 할인">
                             </div>
-                            <h2>'이게 무슨 뜻이지?' 모국어도 단어장이 필요해</h2>
-                            <div>
-                                <div><span>대여 금액 그대로 쿠폰으로 돌려 받자!</span></div>
-                                <div><span>2</span><i></i><span>10</span></div>
+                            <h2 class="slide_contents_title">AI와 함께하는 미래는
+                                오직 디스토피아뿐?</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>&lt;AI 2041&gt; 소장 10% 할인 </span></div>
+                                <div class="slide_contents_option_page"><span>1</span><i></i><span
+                                        class="page_all">10</span></div>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="할인">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_2.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(to bottom, rgba(33, 39, 143, 0), rgba(33, 39, 143, 1)),linear-gradient(to bottom, rgba(33, 39, 143, 0), rgba(33, 39, 143, 1))">
                             </div>
-                            <h2>2달러만 내시면 전부 알려 드립니다</h2>
-                            <div>
-                                <div><span>내 가장 이상적인 삶을 알게 된다면?</span></div>
-                                <div><span>3</span><i></i><span>10</span></div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/discount.png" alt="할인">
+                                <img src="./css/img/rent.png" alt="대여">
+                            </div>
+                            <h2 class="slide_contents_title">'이게 무슨 뜻이지?'
+                                모국어도 단어장이 필요해</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>대여 금액 그대로 쿠폰으로 돌려 받자!</span></div>
+                                <div class="slide_contents_option_page"><span>2</span><i></i><span
+                                        class="page_all">10</span></div>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="Select">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_3.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(to bottom, rgba(70, 52, 199, 0), rgba(70, 52, 199, 1)),linear-gradient(to bottom, rgba(70, 52, 199, 0), rgba(70, 52, 199, 1))">
                             </div>
-                            <h2>더 환호하며, 오늘을 살고 싶어요</h2>
-                            <div>
-                                <div><span>&lt;만일 내가 인생을 다시 산다면&gt;을 읽고</span></div>
-                                <div><span>4</span><i></i><span>10</span></div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/discount.png" alt="할인">
+                            </div>
+                            <h2 class="slide_contents_title">2달러만 내시면
+                                전부 알려 드립니다</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>내 가장 이상적인 삶을 알게 된다면?</span></div>
+                                <div class="slide_contents_option_page"><span>3</span><i></i><span
+                                        class="page_all">10</span></div>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="할인">
-                                <img src="" alt="세트">
-                            </div>
-                            <h2>20세기 최고의 명작 전권 세트 소장 기회</h2>
-                            <div>
-                                <div><span>&lt;잃어버린 시간을 찾아서&gt; 전권 세트 오픈!</span></div>
-                                <div><span>5</span><i></i><span>10</span></div>
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_4.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(15, 146, 148, 0), rgb(15, 146, 148)), linear-gradient(rgba(15, 146, 148, 0), rgb(15, 146, 148))">
                             </div>
                         </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="Up">
-                                <img src="" alt="Select">
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/discount.png" alt="할인">
+                                <img src="./css/img/set.png" alt="세트">
                             </div>
-                            <h2>리디셀렉트 2월 2주차 입고도서 공개!</h2>
-                            <div>
-                                <div><span>&lt;영화를 빨리 감기로 보는 사람들&gt;입고</span></div>
-                                <div><span>6</span><i></i><span>10</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="할인">
-                                <img src="" alt="대여">
-                            </div>
-                            <h2>대문호의 정수를 한 권으로 압축하다</h2>
-                            <div>
-                                <div><span>&lt;디 에센셜&gt; 시리즈 대여 할인 기획전</span></div>
-                                <div><span>7</span><i></i><span>10</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="할인">
-                                <img src="" alt="세트">
-                            </div>
-                            <h2>16년간 마루 밑에 잠들어 있던 소녀</h2>
-                            <div>
-                                <div>
+                            <h2 class="slide_contents_title">16년간 마루 밑에
+                                잠들어 있던 소녀</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event">
                                     <span>&lt;모방범&gt;후 9년, 미야베 미유키 미스터리 세트</span>
-                                    <div>© 미야베 미유키 / 문학동네<br></div>
+                                    <div>© 미야베 미유키 / 문학동네</div>
                                 </div>
-                                <div><span>8</span><i></i><span>10</span></div>
+                                <div class="slide_contents_option_page"><span>4</span><i></i><span
+                                        class="page_all">10</span></div>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="New">
-                                <img src="" alt="10% 할인">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_5.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(5, 59, 150, 0), rgb(5, 59, 150)), linear-gradient(rgba(5, 59, 150, 0), rgb(5, 59, 150))">
                             </div>
-                            <h2>&lt;게임주 빅뱅&gt;, &lt;주식은 심리다&gt; 선출간 기념</h2>
-                            <div>
-                                <div><span>베가북스 도서 10% 할인 </span></div>
-                                <div><span>9</span><i></i>
-                                    <span">10</span>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/discount.png" alt="할인">
+                                <img src="./css/img/set.png" alt="세트">
+                            </div>
+                            <h2 class="slide_contents_title">20세기 최고의 명작
+                                전권 세트 소장 기회</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>&lt;잃어버린 시간을 찾아서&gt; 전권 세트 오픈!</span>
                                 </div>
+                                <div class="slide_contents_option_page"><span>5</span><i></i><span
+                                        class="page_all">10</span></div>
                             </div>
                         </div>
                     </div>
                 </a>
                 <a href="#">
-                    <div>
-                        <div>
-                            <div>
-                                <img src="" alt="할인">.
-                                <img src="" alt="대여">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_6.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(1, 27, 109, 0), rgb(1, 27, 109)), linear-gradient(rgba(1, 27, 109, 0), rgb(1, 27, 109))">
                             </div>
-                            <h2>책으로 건강 지키기! 몸과 마음을 위한 책</h2>
-                            <div>
-                                <div><span>&lt;인요가 가이드&gt; 출간 이벤트!</span></div>
-                                <div><span>10</span><i></i><span>10</span></div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/up.png" alt="Up">
+                                <img src="./css/img/select.png" alt="Select">
+                            </div>
+                            <h2 class="slide_contents_title">리디셀렉트
+                                2월 2주차 입고도서 공개!</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>&lt;영화를 빨리 감기로 보는 사람들&gt;입고</span></div>
+                                <div class="slide_contents_option_page"><span>6</span><i></i><span
+                                        class="page_all">10</span></div>
                             </div>
                         </div>
                     </div>
                 </a>
-    
-                <div class="slide_btn">
-                    <button type="button" title="이전" class="prev">
-                        <span>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4.639 14.23a.7.7 0 010-.99L9.877 8 4.639 2.763a.7.7 0 11.99-.99l5.733 5.733a.7.7 0 010 .99l-5.733 5.733a.7.7 0 01-.99 0z"
-                                    fill="currentColor"></path>
-                            </svg>
-                        </span>
-                    </button>
-                    <button type="button" title="다음" class="next">
-                        <span>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4.639 14.23a.7.7 0 010-.99L9.877 8 4.639 2.763a.7.7 0 11.99-.99l5.733 5.733a.7.7 0 010 .99l-5.733 5.733a.7.7 0 01-.99 0z"
-                                    fill="currentColor"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </div>
+                <a href="#">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_7.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(122, 111, 98, 0), rgb(122, 111, 98)), linear-gradient(rgba(122, 111, 98, 0), rgb(122, 111, 98))">
+                            </div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/discount.png" alt="할인">
+                                <img src="./css/img/set.png" alt="세트">
+                            </div>
+                            <h2 class="slide_contents_title">추리, 미스터리, 호러
+                                밀리언셀러클럽 기획전</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>최대 1,900원 대여, 가볍게 만나는 명작!</span></div>
+                                <div class="slide_contents_option_page"><span>7</span><i></i><span
+                                        class="page_all">10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_8.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(125, 22, 24, 0), rgb(125, 22, 24)), linear-gradient(rgba(125, 22, 24, 0), rgb(125, 22, 24))">
+                            </div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/only.png" alt="Only">
+                                <img src="./css/img/discount.png" alt="할인">
+                            </div>
+                            <h2 class="slide_contents_title">여섯 개의 단편,
+                                단 하나의 결말</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>&lt;13.67&gt;전면 개정판, 리디 선독점 출간!</span>
+                                </div>
+                                <div class="slide_contents_option_page"><span>8</span><i></i><span
+                                        class="page_all">10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_9.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(125, 92, 72, 0), rgb(125, 92, 72)), linear-gradient(rgba(125, 92, 72, 0), rgb(125, 92, 72))">
+                            </div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/select.png" alt="Select">
+                            </div>
+                            <h2 class="slide_contents_title">더 환호하며,
+                                오늘을 살고 싶어요</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>&lt;만일 내가 인생을 다시 산다면&gt;을 읽고</span></div>
+                                <div class="slide_contents_option_page"><span>9</span><i></i><span
+                                        class="page_all">10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="slide_img_wrap">
+                        <div class="slide_img" style="background-image:url('./css/img/slide_img_10.jpg')">
+                            <div class="slide_img_gradient"
+                                style="background-image:linear-gradient(rgba(141, 103, 57, 0), rgb(141, 103, 57)), linear-gradient(rgba(141, 103, 57, 0), rgb(141, 103, 57))">
+                            </div>
+                        </div>
+                        <div class="slide_contents">
+                            <div class="slide_contents_img">
+                                <img src="./css/img/discount.png" alt="할인">
+                                <img src="./css/img/rent.png" alt="대여">
+                            </div>
+                            <h2 class="slide_contents_title">책으로 건강 지키기!
+                                몸과 마음을 위한 책</h2>
+                            <div class="slide_contents_option">
+                                <div class="slide_contents_option_event"><span>&lt;인요가 가이드&gt; 출간 이벤트!</span></div>
+                                <div class="slide_contents_option_page"><span>10</span><i></i><span
+                                        class="page_all">10</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="slide_btn">
+                <button type="button" title="이전" class="prev">
+                    <span>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.639 14.23a.7.7 0 010-.99L9.877 8 4.639 2.763a.7.7 0 11.99-.99l5.733 5.733a.7.7 0 010 .99l-5.733 5.733a.7.7 0 01-.99 0z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" title="다음" class="next">
+                    <span>
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.639 14.23a.7.7 0 010-.99L9.877 8 4.639 2.763a.7.7 0 11.99-.99l5.733 5.733a.7.7 0 010 .99l-5.733 5.733a.7.7 0 01-.99 0z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </button>
             </div>
         </section>
     </main>
