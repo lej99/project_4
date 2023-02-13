@@ -4,6 +4,7 @@
 
 main {
     width: 1170px;
+    padding: 0 30px;
     margin: 0 auto;
 
     section#slide {
@@ -18,16 +19,16 @@ main {
             overflow: hidden;
 
             a {
-                border-radius: 6px;
-                margin: 0 3px;
                 height: 100%;
+                width: 0;
                 overflow: hidden;
 
                 div.slide_img_wrap {
                     position: relative;
                     height: 100%;
-                    width: 1018px;
                     overflow: hidden;
+                    margin: 0 3px;
+                    border-radius: 6px;
                     
                     .slide_img {
                         position: absolute;
@@ -53,7 +54,9 @@ main {
                         justify-content: flex-end;
                         flex-direction: column;
                         height: 100%;
+                        width: 1018px;
                         padding: 40px;
+                        opacity: 0;
 
                         .slide_contents_img {
                             @include flexInline;
@@ -146,6 +149,7 @@ main {
             height: 100%;
             position: absolute;
             top: 0;
+            pointer-events: none;
 
             button {
                 width: 40px;
@@ -155,9 +159,10 @@ main {
                 background-color: #fff;
                 top: 50%;
                 box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
-                
+                pointer-events: auto;
 
                 svg {
+                    font-size: 18px;
                     path {
                         color: $titleFontColor;
                     }
@@ -183,9 +188,788 @@ main {
 
             button:hover {
                     path {
+                        opacity: 0.3;
+                        transition: all 0.1s;
+                    }
+            }
+        }
+    }
+
+    section#quick_menu {
+        width: 70%;
+        height: 94px;
+        position: relative;
+        margin: 30px auto;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            @include flexInline;
+            justify-content: space-evenly;
+
+            li {
+                width: 70px;
+                height: 100%;
+                
+                a {
+                    width: 100%;
+                    height: 100%;
+                    @include flexBetween;
+                    flex-direction: column;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        color: $titleFontColor;
+                        @include fontB;
+                    }
+                }
+            }
+        }
+    }
+
+    section#today {
+        width: 100%;
+        position: relative;
+
+        h3.title {
+            color: $titleFontColor;
+            @include fontB;
+            padding: 20px 0;
+            font-size: 22px;
+        }
+
+        div#today_books {
+            width: 100%;
+            overflow: hidden;
+
+            ul {
+                width: 1500px;
+                
+                li {
+                    width: 179px;
+                    margin-right: 2px;
+                    display: inline-flex;
+                    flex-direction: column;
+        
+                    a {
+                        width: 100%;
+                        height: 260px;
+                        overflow: hidden;
+                        border-radius: 6px;
+                        border: 1px solid $borderColor;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    h4 {
+                        color: $titleFontColor;
+                        @include fontB;
+                        letter-spacing: -0.01em;
+                        word-wrap: break-word;
+                        word-break: keep-all;
+                        white-space: pre-line;
+                        padding: 10px 0;
+                    }
+                }
+            }
+
+            .book_slide_btn {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    @include circleline;
+                    position: absolute;
+                    background-color: #fff;
+                    top: 50%;
+                    box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
+                    pointer-events: auto;
+
+                    svg {
+                        font-size: 18px;
+                        path {
+                            color: $titleFontColor;
+                        }
+                    }
+                }
+
+                button.prev {
+                    left: 0;
+                    right: auto;
+                    transform: translate(-50%, -50%);
+
+                    svg {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                button.next {
+                    left: auto;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
+
+                button:hover {
+                    path {
+                        opacity: 0.3;
+                        transition: all 0.1s;
+                    }
+                }
+            }
+        }
+    }
+
+    section#now {
+        width: 100%;
+        margin: 30px 0;
+        position: relative;
+
+        h3.title {
+            color: $titleFontColor;
+            @include fontB;
+            padding: 20px 0;
+            font-size: 22px;
+        }
+
+        div#now_books {
+            width: 100%;
+            overflow: hidden;
+
+            ul.book_slide {
+                width: 200%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    width: 100%;
+                    display: flex;
+
+                    ol {
+                        
+                        li{
+                            margin-bottom: 6px;
+                            
+                            a.thumbnail {
+                                width: 80px;
+                                min-width: 80px;
+                                height: 116px;
+                                border: 1px solid $borderColor;
+                                overflow: hidden;
+                                border-radius: 6px;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            h4.num {
+                                color: $titleFontColor;
+                                @include fontB;
+                                line-height: 116px;
+                                padding: 0 35px;
+                            }
+
+                            div {
+                                width: 200px;
+                                
+                                h4.title {
+                                    color: $titleFontColor;
+                                    text-overflow: ellipsis;
+                                    white-space:nowrap;
+                                    overflow: hidden;
+                                    line-height: 20px;
+                                    max-height: 20px;
+                                }
+
+                                a {
+                                    p.authors {
+                                        font-size: 14px;
+                                        padding: 4px 0;
+                                    }
+                                }
+
+                                a:hover {
+                                    opacity: 0.6;
+                                    transition: all 0.3s;
+                                }
+                                
+                                p.stars {
+                                    font-size: 13px;
+                                    @include flexInline;
+                                    
+                                    svg {
+                                        width: 11px;
+                                        height: 11px;
+                                        path {
+                                            color: #DC3232;
+                                        }
+                                    }
+                                    span.reviews {
+                                        color: #DC3232;
+                                        margin: 0 3px;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+            .book_slide_btn {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    @include circleline;
+                    position: absolute;
+                    background-color: #fff;
+                    top: 50%;
+                    box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
+                    pointer-events: auto;
+
+                    svg {
+                        font-size: 18px;
+                        path {
+                            color: $titleFontColor;
+                        }
+                    }
+                }
+
+                button.prev {
+                    left: 0;
+                    right: auto;
+                    transform: translate(-50%, -50%);
+
+                    svg {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                button.next {
+                    left: auto;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
+
+                button:hover {
+                    path {
+                        opacity: 0.3;
+                        transition: all 0.1s;
+                    }
+                }
+            }
+        }
+    }
+
+    section#new {
+        width: 100%;
+        position: relative;
+        margin: 30px 0;
+
+        h3.title {
+            color: $titleFontColor;
+            @include fontB;
+            padding: 20px 0;
+            @include flexBetween;
+            font-size: 22px;
+
+            span {
+                font-size: 16px;
+                a {
+                @include fontB;
+                opacity: 0.6;
+                }
+            }
+        }
+
+        div#new_books {
+            width: 100%;
+            overflow: hidden;
+
+            ul {
+                width: 1500px;
+                
+                li {
+                    width: 179px;
+                    margin-right: 2px;
+                    display: inline-flex;
+                    flex-direction: column;
+        
+                    a.thumbnail {
+                        width: 100%;
+                        height: 260px;
+                        overflow: hidden;
+                        border-radius: 6px;
+                        border: 1px solid $borderColor;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    h4.title {
+                        color: $titleFontColor;
+                        @include fontB;
+                        text-overflow: ellipsis;
+                        white-space:wrap;
+                        overflow: hidden;
+                        padding: 10px 0;
+                    }
+
+                    a.authors {
+                        p {
+                            font-size: 14px;
+                            padding: 4px 0;
+                        }
+                    }
+
+                    a.authors:hover {
                         opacity: 0.6;
                         transition: all 0.3s;
                     }
+                    
+                    p.stars {
+                        font-size: 13px;
+                        @include flexInline;
+                        
+                        svg {
+                            width: 11px;
+                            height: 11px;
+                            path {
+                                color: #DC3232;
+                            }
+                        }
+                        span.reviews {
+                            color: #DC3232;
+                            margin: 0 3px;
+                        }
+                        
+                    }
+                }
+            }
+
+            .book_slide_btn {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    @include circleline;
+                    position: absolute;
+                    background-color: #fff;
+                    top: 50%;
+                    box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
+                    pointer-events: auto;
+
+                    svg {
+                        font-size: 18px;
+                        path {
+                            color: $titleFontColor;
+                        }
+                    }
+                }
+
+                button.prev {
+                    left: 0;
+                    right: auto;
+                    transform: translate(-50%, -50%);
+
+                    svg {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                button.next {
+                    left: auto;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
+
+                button:hover {
+                    path {
+                        opacity: 0.3;
+                        transition: all 0.1s;
+                    }
+                }
+            }
+        }
+    }
+
+    section#best {
+        width: 100%;
+        margin: 30px 0;
+        position: relative;
+
+        h3.title {
+            color: $titleFontColor;
+            @include fontB;
+            padding: 20px 0;
+            @include flexBetween;
+            font-size: 22px;
+
+            span {
+                font-size: 16px;
+                a {
+                @include fontB;
+                opacity: 0.6;
+                }
+            }
+        }
+
+        div#best_books {
+            width: 100%;
+            overflow: hidden;
+
+            ul.book_slide {
+                width: 200%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    width: 100%;
+                    display: flex;
+
+                    ol {
+                        
+                        li{
+                            margin-bottom: 6px;
+                            
+                            a.thumbnail {
+                                width: 80px;
+                                min-width: 80px;
+                                height: 116px;
+                                border: 1px solid $borderColor;
+                                overflow: hidden;
+                                border-radius: 6px;
+
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            h4.num {
+                                color: $titleFontColor;
+                                @include fontB;
+                                line-height: 116px;
+                                padding: 0 35px;
+                            }
+
+                            div {
+                                width: 200px;
+                                
+                                h4.title {
+                                    color: $titleFontColor;
+                                    text-overflow: ellipsis;
+                                    white-space:nowrap;
+                                    overflow: hidden;
+                                    line-height: 20px;
+                                    max-height: 20px;
+                                }
+
+                                a {
+                                    p.authors {
+                                        font-size: 14px;
+                                        padding: 4px 0;
+                                    }
+                                }
+
+                                a:hover {
+                                    opacity: 0.6;
+                                    transition: all 0.3s;
+                                }
+                                
+                                p.stars {
+                                    font-size: 13px;
+                                    @include flexInline;
+                                    
+                                    svg {
+                                        width: 11px;
+                                        height: 11px;
+                                        path {
+                                            color: #DC3232;
+                                        }
+                                    }
+                                    span.reviews {
+                                        color: #DC3232;
+                                        margin: 0 3px;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+            .book_slide_btn {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    @include circleline;
+                    position: absolute;
+                    background-color: #fff;
+                    top: 50%;
+                    box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
+                    pointer-events: auto;
+
+                    svg {
+                        font-size: 18px;
+                        path {
+                            color: $titleFontColor;
+                        }
+                    }
+                }
+
+                button.prev {
+                    left: 0;
+                    right: auto;
+                    transform: translate(-50%, -50%);
+
+                    svg {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                button.next {
+                    left: auto;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
+
+                button:hover {
+                    path {
+                        opacity: 0.3;
+                        transition: all 0.1s;
+                    }
+                }
+            }
+        }
+    }
+
+    section#selection {
+        width: 100%;
+        margin: 30px 0;
+        position: relative;
+
+        h3.title {
+            color: $titleFontColor;
+            @include fontB;
+            padding: 20px 0;
+            font-size: 22px;
+        }
+
+        ul.wrap {
+            width: 100%;
+           @include flexBetween;
+            
+            li{
+                
+                a.img {
+                    position: relative;
+                    display: block;
+                    width: 217px;
+                    height: 434px;
+                    border-radius: 6px;
+                    background-size: cover;
+                    overflow: hidden;
+
+                    div.img_gradient {
+                        width: 100%;
+                        height: 45%;
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                    div.contents {
+                        width: 180px;
+                        height: 33%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+        }
+    }
+
+    section#health {
+        width: 100%;
+        position: relative;
+        margin: 30px 0 50px 0;
+
+        h3.title {
+            color: $titleFontColor;
+            @include fontB;
+            padding: 20px 0;
+            @include flexBetween;
+            font-size: 22px;
+
+            span {
+                font-size: 16px;
+                a {
+                @include fontB;
+                opacity: 0.6;
+                }
+            }
+        }
+
+        div#health_books {
+            width: 100%;
+            overflow: hidden;
+
+            ul {
+                width: 1500px;
+                
+                li {
+                    width: 179px;
+                    margin-right: 2px;
+                    display: inline-flex;
+                    flex-direction: column;
+        
+                    a.thumbnail {
+                        width: 100%;
+                        height: 260px;
+                        overflow: hidden;
+                        border-radius: 6px;
+                        border: 1px solid $borderColor;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    h4.title {
+                        color: $titleFontColor;
+                        @include fontB;
+                        text-overflow: ellipsis;
+                        white-space:wrap;
+                        overflow: hidden;
+                        padding: 10px 0;
+                    }
+
+                    a.authors {
+                        p {
+                            font-size: 14px;
+                            padding: 4px 0;
+                        }
+                    }
+
+                    a.authors:hover {
+                        opacity: 0.6;
+                        transition: all 0.3s;
+                    }
+                    
+                    p.stars {
+                        font-size: 13px;
+                        @include flexInline;
+                        
+                        svg {
+                            width: 11px;
+                            height: 11px;
+                            path {
+                                color: #DC3232;
+                            }
+                        }
+                        span.reviews {
+                            color: #DC3232;
+                            margin: 0 3px;
+                        }
+                        
+                    }
+                }
+            }
+
+            .book_slide_btn {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    @include circleline;
+                    position: absolute;
+                    background-color: #fff;
+                    top: 50%;
+                    box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
+                    pointer-events: auto;
+
+                    svg {
+                        font-size: 18px;
+                        path {
+                            color: $titleFontColor;
+                        }
+                    }
+                }
+
+                button.prev {
+                    left: 0;
+                    right: auto;
+                    transform: translate(-50%, -50%);
+
+                    svg {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                button.next {
+                    left: auto;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
+
+                button:hover {
+                    path {
+                        opacity: 0.3;
+                        transition: all 0.1s;
+                    }
+                }
             }
         }
     }

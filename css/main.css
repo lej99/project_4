@@ -1,5 +1,6 @@
 main {
   width: 1170px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 main section#slide {
@@ -14,16 +15,16 @@ main section#slide div.wrap {
   overflow: hidden;
 }
 main section#slide div.wrap a {
-  border-radius: 6px;
-  margin: 0 3px;
   height: 100%;
+  width: 0;
   overflow: hidden;
 }
 main section#slide div.wrap a div.slide_img_wrap {
   position: relative;
   height: 100%;
-  width: 1018px;
   overflow: hidden;
+  margin: 0 3px;
+  border-radius: 6px;
 }
 main section#slide div.wrap a div.slide_img_wrap .slide_img {
   position: absolute;
@@ -47,7 +48,9 @@ main section#slide div.wrap a div.slide_img_wrap .slide_contents {
   justify-content: flex-end;
   flex-direction: column;
   height: 100%;
+  width: 1018px;
   padding: 40px;
+  opacity: 0;
 }
 main section#slide div.wrap a div.slide_img_wrap .slide_contents .slide_contents_img {
   display: inline-flex;
@@ -128,6 +131,7 @@ main section#slide .slide_btn {
   height: 100%;
   position: absolute;
   top: 0;
+  pointer-events: none;
 }
 main section#slide .slide_btn button {
   width: 40px;
@@ -138,6 +142,10 @@ main section#slide .slide_btn button {
   background-color: #fff;
   top: 50%;
   box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  pointer-events: auto;
+}
+main section#slide .slide_btn button svg {
+  font-size: 18px;
 }
 main section#slide .slide_btn button svg path {
   color: #000;
@@ -156,6 +164,664 @@ main section#slide .slide_btn button.next {
   transform: translate(50%, -50%);
 }
 main section#slide .slide_btn button:hover path {
+  opacity: 0.3;
+  transition: all 0.1s;
+}
+main section#quick_menu {
+  width: 70%;
+  height: 94px;
+  position: relative;
+  margin: 30px auto;
+}
+main section#quick_menu ul {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main section#quick_menu ul li {
+  width: 70px;
+  height: 100%;
+}
+main section#quick_menu ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+main section#quick_menu ul li a img {
+  width: 100%;
+  height: auto;
+}
+main section#quick_menu ul li a span {
+  font-size: 12px;
+  color: #000;
+  font-weight: 900;
+}
+main section#today {
+  width: 100%;
+  position: relative;
+}
+main section#today h3.title {
+  color: #000;
+  font-weight: 900;
+  padding: 20px 0;
+  font-size: 22px;
+}
+main section#today div#today_books {
+  width: 100%;
+  overflow: hidden;
+}
+main section#today div#today_books ul {
+  width: 1500px;
+}
+main section#today div#today_books ul li {
+  width: 179px;
+  margin-right: 2px;
+  display: inline-flex;
+  flex-direction: column;
+}
+main section#today div#today_books ul li a {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+main section#today div#today_books ul li a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#today div#today_books ul li h4 {
+  color: #000;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  word-wrap: break-word;
+  word-break: keep-all;
+  white-space: pre-line;
+  padding: 10px 0;
+}
+main section#today div#today_books .book_slide_btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+main section#today div#today_books .book_slide_btn button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  pointer-events: auto;
+}
+main section#today div#today_books .book_slide_btn button svg {
+  font-size: 18px;
+}
+main section#today div#today_books .book_slide_btn button svg path {
+  color: #000;
+}
+main section#today div#today_books .book_slide_btn button.prev {
+  left: 0;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+main section#today div#today_books .book_slide_btn button.prev svg {
+  transform: scaleX(-1);
+}
+main section#today div#today_books .book_slide_btn button.next {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+main section#today div#today_books .book_slide_btn button:hover path {
+  opacity: 0.3;
+  transition: all 0.1s;
+}
+main section#now {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+main section#now h3.title {
+  color: #000;
+  font-weight: 900;
+  padding: 20px 0;
+  font-size: 22px;
+}
+main section#now div#now_books {
+  width: 100%;
+  overflow: hidden;
+}
+main section#now div#now_books ul.book_slide {
+  width: 200%;
+  display: flex;
+  justify-content: space-between;
+}
+main section#now div#now_books ul.book_slide li {
+  width: 100%;
+  display: flex;
+}
+main section#now div#now_books ul.book_slide li ol li {
+  margin-bottom: 6px;
+}
+main section#now div#now_books ul.book_slide li ol li a.thumbnail {
+  width: 80px;
+  min-width: 80px;
+  height: 116px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+  border-radius: 6px;
+}
+main section#now div#now_books ul.book_slide li ol li a.thumbnail img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#now div#now_books ul.book_slide li ol li h4.num {
+  color: #000;
+  font-weight: 900;
+  line-height: 116px;
+  padding: 0 35px;
+}
+main section#now div#now_books ul.book_slide li ol li div {
+  width: 200px;
+}
+main section#now div#now_books ul.book_slide li ol li div h4.title {
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 20px;
+  max-height: 20px;
+}
+main section#now div#now_books ul.book_slide li ol li div a p.authors {
+  font-size: 14px;
+  padding: 4px 0;
+}
+main section#now div#now_books ul.book_slide li ol li div a:hover {
   opacity: 0.6;
   transition: all 0.3s;
+}
+main section#now div#now_books ul.book_slide li ol li div p.stars {
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+}
+main section#now div#now_books ul.book_slide li ol li div p.stars svg {
+  width: 11px;
+  height: 11px;
+}
+main section#now div#now_books ul.book_slide li ol li div p.stars svg path {
+  color: #DC3232;
+}
+main section#now div#now_books ul.book_slide li ol li div p.stars span.reviews {
+  color: #DC3232;
+  margin: 0 3px;
+}
+main section#now div#now_books .book_slide_btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+main section#now div#now_books .book_slide_btn button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  pointer-events: auto;
+}
+main section#now div#now_books .book_slide_btn button svg {
+  font-size: 18px;
+}
+main section#now div#now_books .book_slide_btn button svg path {
+  color: #000;
+}
+main section#now div#now_books .book_slide_btn button.prev {
+  left: 0;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+main section#now div#now_books .book_slide_btn button.prev svg {
+  transform: scaleX(-1);
+}
+main section#now div#now_books .book_slide_btn button.next {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+main section#now div#now_books .book_slide_btn button:hover path {
+  opacity: 0.3;
+  transition: all 0.1s;
+}
+main section#new {
+  width: 100%;
+  position: relative;
+  margin: 30px 0;
+}
+main section#new h3.title {
+  color: #000;
+  font-weight: 900;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+}
+main section#new h3.title span {
+  font-size: 16px;
+}
+main section#new h3.title span a {
+  font-weight: 900;
+  opacity: 0.6;
+}
+main section#new div#new_books {
+  width: 100%;
+  overflow: hidden;
+}
+main section#new div#new_books ul {
+  width: 1500px;
+}
+main section#new div#new_books ul li {
+  width: 179px;
+  margin-right: 2px;
+  display: inline-flex;
+  flex-direction: column;
+}
+main section#new div#new_books ul li a.thumbnail {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+main section#new div#new_books ul li a.thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#new div#new_books ul li h4.title {
+  color: #000;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
+  padding: 10px 0;
+}
+main section#new div#new_books ul li a.authors p {
+  font-size: 14px;
+  padding: 4px 0;
+}
+main section#new div#new_books ul li a.authors:hover {
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+main section#new div#new_books ul li p.stars {
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+}
+main section#new div#new_books ul li p.stars svg {
+  width: 11px;
+  height: 11px;
+}
+main section#new div#new_books ul li p.stars svg path {
+  color: #DC3232;
+}
+main section#new div#new_books ul li p.stars span.reviews {
+  color: #DC3232;
+  margin: 0 3px;
+}
+main section#new div#new_books .book_slide_btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+main section#new div#new_books .book_slide_btn button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  pointer-events: auto;
+}
+main section#new div#new_books .book_slide_btn button svg {
+  font-size: 18px;
+}
+main section#new div#new_books .book_slide_btn button svg path {
+  color: #000;
+}
+main section#new div#new_books .book_slide_btn button.prev {
+  left: 0;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+main section#new div#new_books .book_slide_btn button.prev svg {
+  transform: scaleX(-1);
+}
+main section#new div#new_books .book_slide_btn button.next {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+main section#new div#new_books .book_slide_btn button:hover path {
+  opacity: 0.3;
+  transition: all 0.1s;
+}
+main section#best {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+main section#best h3.title {
+  color: #000;
+  font-weight: 900;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+}
+main section#best h3.title span {
+  font-size: 16px;
+}
+main section#best h3.title span a {
+  font-weight: 900;
+  opacity: 0.6;
+}
+main section#best div#best_books {
+  width: 100%;
+  overflow: hidden;
+}
+main section#best div#best_books ul.book_slide {
+  width: 200%;
+  display: flex;
+  justify-content: space-between;
+}
+main section#best div#best_books ul.book_slide li {
+  width: 100%;
+  display: flex;
+}
+main section#best div#best_books ul.book_slide li ol li {
+  margin-bottom: 6px;
+}
+main section#best div#best_books ul.book_slide li ol li a.thumbnail {
+  width: 80px;
+  min-width: 80px;
+  height: 116px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+  border-radius: 6px;
+}
+main section#best div#best_books ul.book_slide li ol li a.thumbnail img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#best div#best_books ul.book_slide li ol li h4.num {
+  color: #000;
+  font-weight: 900;
+  line-height: 116px;
+  padding: 0 35px;
+}
+main section#best div#best_books ul.book_slide li ol li div {
+  width: 200px;
+}
+main section#best div#best_books ul.book_slide li ol li div h4.title {
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 20px;
+  max-height: 20px;
+}
+main section#best div#best_books ul.book_slide li ol li div a p.authors {
+  font-size: 14px;
+  padding: 4px 0;
+}
+main section#best div#best_books ul.book_slide li ol li div a:hover {
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+main section#best div#best_books ul.book_slide li ol li div p.stars {
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+}
+main section#best div#best_books ul.book_slide li ol li div p.stars svg {
+  width: 11px;
+  height: 11px;
+}
+main section#best div#best_books ul.book_slide li ol li div p.stars svg path {
+  color: #DC3232;
+}
+main section#best div#best_books ul.book_slide li ol li div p.stars span.reviews {
+  color: #DC3232;
+  margin: 0 3px;
+}
+main section#best div#best_books .book_slide_btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+main section#best div#best_books .book_slide_btn button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  pointer-events: auto;
+}
+main section#best div#best_books .book_slide_btn button svg {
+  font-size: 18px;
+}
+main section#best div#best_books .book_slide_btn button svg path {
+  color: #000;
+}
+main section#best div#best_books .book_slide_btn button.prev {
+  left: 0;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+main section#best div#best_books .book_slide_btn button.prev svg {
+  transform: scaleX(-1);
+}
+main section#best div#best_books .book_slide_btn button.next {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+main section#best div#best_books .book_slide_btn button:hover path {
+  opacity: 0.3;
+  transition: all 0.1s;
+}
+main section#selection {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+main section#selection h3.title {
+  color: #000;
+  font-weight: 900;
+  padding: 20px 0;
+  font-size: 22px;
+}
+main section#selection ul.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#selection ul.wrap li a.img {
+  position: relative;
+  display: block;
+  width: 217px;
+  height: 434px;
+  border-radius: 6px;
+  background-size: cover;
+  overflow: hidden;
+}
+main section#selection ul.wrap li a.img div.img_gradient {
+  width: 100%;
+  height: 45%;
+  position: absolute;
+  bottom: 0;
+}
+main section#selection ul.wrap li a.img div.contents {
+  width: 180px;
+  height: 33%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+main section#health {
+  width: 100%;
+  position: relative;
+  margin: 30px 0 50px 0;
+}
+main section#health h3.title {
+  color: #000;
+  font-weight: 900;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+}
+main section#health h3.title span {
+  font-size: 16px;
+}
+main section#health h3.title span a {
+  font-weight: 900;
+  opacity: 0.6;
+}
+main section#health div#health_books {
+  width: 100%;
+  overflow: hidden;
+}
+main section#health div#health_books ul {
+  width: 1500px;
+}
+main section#health div#health_books ul li {
+  width: 179px;
+  margin-right: 2px;
+  display: inline-flex;
+  flex-direction: column;
+}
+main section#health div#health_books ul li a.thumbnail {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+}
+main section#health div#health_books ul li a.thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#health div#health_books ul li h4.title {
+  color: #000;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
+  padding: 10px 0;
+}
+main section#health div#health_books ul li a.authors p {
+  font-size: 14px;
+  padding: 4px 0;
+}
+main section#health div#health_books ul li a.authors:hover {
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+main section#health div#health_books ul li p.stars {
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+}
+main section#health div#health_books ul li p.stars svg {
+  width: 11px;
+  height: 11px;
+}
+main section#health div#health_books ul li p.stars svg path {
+  color: #DC3232;
+}
+main section#health div#health_books ul li p.stars span.reviews {
+  color: #DC3232;
+  margin: 0 3px;
+}
+main section#health div#health_books .book_slide_btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+main section#health div#health_books .book_slide_btn button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  pointer-events: auto;
+}
+main section#health div#health_books .book_slide_btn button svg {
+  font-size: 18px;
+}
+main section#health div#health_books .book_slide_btn button svg path {
+  color: #000;
+}
+main section#health div#health_books .book_slide_btn button.prev {
+  left: 0;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+main section#health div#health_books .book_slide_btn button.prev svg {
+  transform: scaleX(-1);
+}
+main section#health div#health_books .book_slide_btn button.next {
+  left: auto;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+main section#health div#health_books .book_slide_btn button:hover path {
+  opacity: 0.3;
+  transition: all 0.1s;
 }

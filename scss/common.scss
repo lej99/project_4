@@ -11,6 +11,7 @@
         width: 1170px;
         height: 40px;
         margin: 0 auto;
+        padding: 0 30px;
         @include flexBetween;
 
         ul {
@@ -59,6 +60,7 @@ header {
     width: 1170px;
     height: 75px;
     margin: 0 auto;
+    padding: 0 30px;
     @include flexBetween;
 
     .header_logo {
@@ -117,6 +119,7 @@ header {
 .categories {
     width: 1170px;
     margin: 0 auto;
+    padding: 0 30px;
 
     .cate1 {
         @include flexBetween;
@@ -179,7 +182,7 @@ header {
     footer {
         width: 1170px;
         margin: 0 auto;
-        padding: 40px 0;
+        padding: 40px 30px;
         @include flexBetween(flex-start);
 
         .info_wrap {

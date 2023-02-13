@@ -30,6 +30,7 @@ a {
   width: 1170px;
   height: 40px;
   margin: 0 auto;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,6 +69,7 @@ header {
   width: 1170px;
   height: 75px;
   margin: 0 auto;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +119,7 @@ header nav .user_menu li a svg path {
 .categories {
   width: 1170px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 .categories .cate1 {
   display: flex;
@@ -175,7 +178,7 @@ header nav .user_menu li a svg path {
 #footer_wrap footer {
   width: 1170px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
