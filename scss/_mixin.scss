@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-@mixin underline() {
-    border-bottom: 1px solid $borderColor;
+@mixin underline($color: $borderColor) {
+    border-bottom: 1px solid $color;
 }
 
-@mixin overline() {
-    border-top: 1px solid $borderColor;
+@mixin overline($color: $borderColor) {
+    border-top: 1px solid $color;
 }
 
-@mixin circleline() {
-    border: 1px solid $borderColor;
+@mixin circleline($color: $borderColor) {
+    border: 1px solid $color;
     border-radius: 50%;
 }
 

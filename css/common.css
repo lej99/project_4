@@ -74,12 +74,12 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header .header_logo {
+header .header_logo a {
   display: flex;
   height: 40px;
   padding: 10px 0;
 }
-header .header_logo div {
+header .header_logo a div {
   padding-right: 6px;
 }
 header nav {

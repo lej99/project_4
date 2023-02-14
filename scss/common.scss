@@ -64,13 +64,16 @@ header {
     @include flexBetween;
 
     .header_logo {
-        display: flex;
-        height: 40px;
-        padding: 10px 0;
+        a {
+            display: flex;
+            height: 40px;
+            padding: 10px 0;
 
-        div {
-            padding-right: 6px;
+            div {
+                padding-right: 6px;
+            }
         }
+        
     }
 
     nav {
