@@ -76,8 +76,9 @@ header {
     nav {
         @include flexInline;
         height: 40px;
+        position: relative;
 
-        form {
+        form#search {
             width: 260px;
             height: 40px;
             border-radius: 8px;
@@ -93,6 +94,59 @@ header {
                     border: none;
                     background-color: #f0f0f0;
                     caret-color: $lidiColor;
+                }
+            }
+
+            div.search {
+                position: absolute;
+                width: 100%;
+                height: 220px;
+                top: 50px;
+                left: 0;
+                @include flexBetween;
+                flex-direction: column;
+                border: 1px solid $borderColor;
+                border-radius: 6px;
+                background: #fff;
+                box-shadow: 3px 3px 3px rgba($color: #787878, $alpha: 0.2);
+                z-index: 999;
+
+                div.search_newly {
+                    width: 100%;
+                    padding: 15px;
+                    display: flex;
+                    justify-content: flex-start;
+
+                    span {
+                        font-size: 13px;
+                        @include fontB;
+                    }
+                }
+                
+                div.search_event {
+                    width: 100%;
+                    text-align: center;
+
+                    p {
+                        font-size: 14px;
+                        @include fontB;
+                        opacity: 0.6;
+                    }
+                }
+
+                div.search_on {
+                    width: 95%;
+                    padding: 15px;
+                    @include overline;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    span {
+                        font-size: 13px;
+                        @include fontB;
+                        cursor: pointer;
+                    }
                 }
             }
         }

@@ -86,23 +86,72 @@ header nav {
   display: inline-flex;
   align-items: center;
   height: 40px;
+  position: relative;
 }
-header nav form {
+header nav form#search {
   width: 260px;
   height: 40px;
   border-radius: 8px;
   background-color: #f0f0f0;
   padding: 10px;
 }
-header nav form label {
+header nav form#search label {
   cursor: pointer;
 }
-header nav form label input {
+header nav form#search label input {
   margin-left: 6px;
   outline: none;
   border: none;
   background-color: #f0f0f0;
   caret-color: #1E9EFF;
+}
+header nav form#search div.search {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  top: 50px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 3px 3px 3px rgba(120, 120, 120, 0.2);
+  z-index: 999;
+}
+header nav form#search div.search div.search_newly {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+header nav form#search div.search div.search_newly span {
+  font-size: 13px;
+  font-weight: 900;
+}
+header nav form#search div.search div.search_event {
+  width: 100%;
+  text-align: center;
+}
+header nav form#search div.search div.search_event p {
+  font-size: 14px;
+  font-weight: 900;
+  opacity: 0.6;
+}
+header nav form#search div.search div.search_on {
+  width: 95%;
+  padding: 15px;
+  border-top: 1px solid #e6e6e6;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav form#search div.search div.search_on span {
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
 }
 header nav .user_menu {
   display: inline-flex;
