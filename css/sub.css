@@ -21,23 +21,231 @@ main div#book_contents div.book_contents_info {
 }
 main div#book_contents div.book_contents_info div.info_img {
   width: 35%;
-  height: 400px;
   background-color: aliceblue;
 }
 main div#book_contents div.book_contents_info div.info_contents {
   width: 65%;
-  height: 400px;
-  background-color: azure;
+}
+main div#book_contents div.book_contents_info div.info_contents a:hover {
+  color: #1E9EFF;
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_info div.info_contents ol {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 0;
+}
+main div#book_contents div.book_contents_info div.info_contents ol li {
+  font-size: 13px;
+}
+main div#book_contents div.book_contents_info div.info_contents ol li a {
+  color: #000;
+  padding-left: 5px;
+}
+main div#book_contents div.book_contents_info div.info_contents ol li:not(:last-child)::after {
+  content: "❯";
+  color: #000;
+  padding-left: 5px;
+}
+main div#book_contents div.book_contents_info div.info_contents h1 {
+  font-weight: 900;
+  color: #000;
+  font-size: 28px;
+}
+main div#book_contents div.book_contents_info div.info_contents ul.stars {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 15px;
+}
+main div#book_contents div.book_contents_info div.info_contents ul.stars li svg {
+  margin-top: 10px;
+  margin-right: -4px;
+}
+main div#book_contents div.book_contents_info div.info_contents ul.stars li svg path {
+  color: #e6e6e6;
+}
+main div#book_contents div.book_contents_info div.info_contents div.authors {
+  margin-bottom: 10px;
+}
+main div#book_contents div.book_contents_info div.info_contents div.authors p {
+  font-size: 14px;
+  padding: 10px 0;
+}
+main div#book_contents div.book_contents_info div.info_contents div.authors p a {
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_info div.info_contents div.authors p span {
+  padding: 0 3px;
+}
+main div#book_contents div.book_contents_info div.info_contents div.authors p span:first-of-type::after {
+  content: " ";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #e6e6e6;
+  margin-left: 6px;
+}
+main div#book_contents div.book_contents_info div.info_contents p.event {
+  position: relative;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+  margin: 10px 0;
+  font-size: 14px;
+}
+main div#book_contents div.book_contents_info div.info_contents p.event a {
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_info div.info_contents p.event a::after {
+  content: "❯";
+  font-size: 12px;
+  color: #e6e6e6;
+  position: relative;
+  padding-left: 40px;
+}
+main div#book_contents div.book_contents_info div.info_contents p.event::before {
+  content: "이벤트";
+  font-size: 12px;
+  font-weight: 900;
+  color: slateblue;
+  background: lavender;
+  border-radius: 2px;
+  padding: 1px 3px;
+  margin-right: 10px;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  width: 100%;
+  font-size: 14px;
+  border-spacing: 0;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr th {
+  width: 30%;
+  font-weight: 900;
+  color: #000;
+  background-color: #f7fafc;
+  border-right: 1px solid #e6e6e6;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr td {
+  width: 35%;
+  padding: 6px 10px;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr td.right {
+  font-weight: 900;
+  text-align: end;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr td.right span {
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr td.right span::after {
+  content: "➝";
+  display: inline-block;
+  transform: rotate(90deg);
+  margin-left: 1px;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr td.cell {
+  color: #1E9EFF;
+}
+main div#book_contents div.book_contents_info div.info_contents table.price tr td.cell span {
+  color: #DC3232;
 }
 main div#book_contents div.book_contents_info div.info_buy {
   width: 100%;
-  height: 100px;
-  background-color: aqua;
+  text-align: end;
 }
-main div#book_contents div.book_contents_info table {
+main div#book_contents div.book_contents_info div.info_buy p {
+  font-size: 12px;
+  padding: 10px 0;
+}
+main div#book_contents div.book_contents_info div.info_buy p span {
+  font-weight: 900;
+  margin-left: 3px;
+}
+main div#book_contents div.book_contents_info div.info_buy p::before {
+  content: "◾";
+  margin-right: 3px;
+}
+main div#book_contents div.book_contents_info div.info_buy div.cart {
+  padding: 10px 0;
+  display: inline-flex;
+  align-items: center;
+}
+main div#book_contents div.book_contents_info div.info_buy div.cart button {
+  background: #fff;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  margin: 0 2.5px;
+}
+main div#book_contents div.book_contents_info div.info_buy div.cart button:hover {
+  background: rgba(230, 230, 230, 0.5);
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_info div.info_buy div.cart button:last-of-type {
+  background: #1E9EFF;
+  width: 112px;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+  border: 1px solid #0077d9;
+  border-radius: 6px;
+}
+main div#book_contents div.book_contents_info div.info_buy div.cart button:last-of-type:hover {
+  background: #0077d9;
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_info table.info_ {
   width: 100%;
-  height: 100px;
-  background-color: aquamarine;
+  font-size: 12px;
+  text-align: left;
+  border: 3px solid #e6e6e6;
+  padding: 20px;
+  margin-top: 20px;
+}
+main div#book_contents div.book_contents_info table.info_ tr {
+  line-height: 20px;
+}
+main div#book_contents div.book_contents_info table.info_ tr th {
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span::before {
+  margin: 0 3px;
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span.headphone::before {
+  content: "\f025";
+  font: var(--fa-font-solid);
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span.paper::before {
+  content: "▯";
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span.ios::before {
+  content: "\f179";
+  font: var(--fa-font-brands);
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span.android::before {
+  content: "\f17b";
+  font: var(--fa-font-brands);
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span.pc::before {
+  content: "\f17a";
+  font: var(--fa-font-brands);
+}
+main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span.mac::before {
+  content: "\f057";
+  font: var(--fa-font-solid);
+}
+main div#book_contents div.book_contents_info table.info_ tr td.file span:not(:last-of-type)::after {
+  content: " ";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #e6e6e6;
+  margin: 0 6px;
 }
 main div#add {
   width: 207px;
@@ -72,6 +280,7 @@ main div#add div.add_list ul.add_list_title li {
 }
 main div#add div.add_list ul.add_list_title li span {
   color: #DC3232;
+  font-weight: 900;
   display: inline-block;
   width: 20%;
 }
@@ -97,11 +306,10 @@ main div#add div.add_list button {
   position: relative;
 }
 main div#add div.add_list button span::after {
-  content: "▶";
-  font-size: 10px;
+  content: "‣";
+  font-size: 22px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -10%;
 }
 main div#add div.add_list button:hover {
   background: #e6e6e6;
