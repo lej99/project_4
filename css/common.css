@@ -21,6 +21,10 @@ a {
   color: #787878;
 }
 
+button {
+  cursor: pointer;
+}
+
 #top_menu_wrap {
   width: 100%;
   height: auto;
