@@ -12,4 +12,15 @@ $(document).ready(function () {
         }
     }, 1000);
 
+    $('.info_img .img img').click(function(){
+        $('.modal').show();
+        $('body').css('overflow','hidden');
+    });
+    
+    $('.modal').hide();
+    $('.modal').click(function(){
+        $(this).hide();
+        $('body').css('overflow','visible');
+    });
+
 });

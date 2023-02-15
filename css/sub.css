@@ -20,8 +20,106 @@ main div#book_contents div.book_contents_info {
   align-content: center;
 }
 main div#book_contents div.book_contents_info div.info_img {
-  width: 35%;
-  background-color: aliceblue;
+  width: 30%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main div#book_contents div.book_contents_info div.info_img div.img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e6e6e6;
+  position: relative;
+}
+main div#book_contents div.book_contents_info div.info_img div.img img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.shadow1 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.shadow2 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.set {
+  position: absolute;
+  left: -1%;
+  bottom: 20%;
+  width: 102%;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0) 5%, rgba(120, 120, 120, 0) 95%, rgba(120, 120, 120, 0.5));
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.set p {
+  padding: 7px 0;
+  text-align: center;
+  box-shadow: 1px 3px 3px rgba(120, 120, 120, 0.5);
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.set p span {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.set p span::before {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 3px;
+  background-color: #1E9EFF;
+}
+main div#book_contents div.book_contents_info div.info_img div.img div.set p span::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 3px;
+  background-color: #1E9EFF;
+}
+main div#book_contents div.book_contents_info div.info_img div.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+main div#book_contents div.book_contents_info div.info_img div.modal img {
+  width: auto;
+  height: 60vw;
+  position: relative;
+}
+main div#book_contents div.book_contents_info div.info_img button {
+  border: 1px solid #1E9EFF;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 14px;
+  width: 130px;
+  height: 39px;
+  background: #fff;
+  color: #1E9EFF;
+  margin-top: 15px;
+}
+main div#book_contents div.book_contents_info div.info_img button:hover {
+  background-color: #f7fafc;
+  transition: all 0.3s;
 }
 main div#book_contents div.book_contents_info div.info_contents {
   width: 65%;
@@ -71,6 +169,7 @@ main div#book_contents div.book_contents_info div.info_contents div.authors {
 main div#book_contents div.book_contents_info div.info_contents div.authors p {
   font-size: 14px;
   padding: 10px 0;
+  line-height: 22px;
 }
 main div#book_contents div.book_contents_info div.info_contents div.authors p a {
   font-weight: 900;
@@ -151,28 +250,28 @@ main div#book_contents div.book_contents_info div.info_contents table.price tr t
 main div#book_contents div.book_contents_info div.info_contents table.price tr td.cell span {
   color: #DC3232;
 }
-main div#book_contents div.book_contents_info div.info_buy {
+main div#book_contents div.book_contents_info div.info_contents div.buy {
   width: 100%;
   text-align: end;
 }
-main div#book_contents div.book_contents_info div.info_buy p {
+main div#book_contents div.book_contents_info div.info_contents div.buy p {
   font-size: 12px;
   padding: 10px 0;
 }
-main div#book_contents div.book_contents_info div.info_buy p span {
+main div#book_contents div.book_contents_info div.info_contents div.buy p span {
   font-weight: 900;
   margin-left: 3px;
 }
-main div#book_contents div.book_contents_info div.info_buy p::before {
+main div#book_contents div.book_contents_info div.info_contents div.buy p::before {
   content: "◾";
   margin-right: 3px;
 }
-main div#book_contents div.book_contents_info div.info_buy div.cart {
+main div#book_contents div.book_contents_info div.info_contents div.buy div.cart {
   padding: 10px 0;
   display: inline-flex;
   align-items: center;
 }
-main div#book_contents div.book_contents_info div.info_buy div.cart button {
+main div#book_contents div.book_contents_info div.info_contents div.buy div.cart button {
   background: #fff;
   width: 48px;
   height: 48px;
@@ -181,11 +280,11 @@ main div#book_contents div.book_contents_info div.info_buy div.cart button {
   border-radius: 6px;
   margin: 0 2.5px;
 }
-main div#book_contents div.book_contents_info div.info_buy div.cart button:hover {
+main div#book_contents div.book_contents_info div.info_contents div.buy div.cart button:hover {
   background: rgba(230, 230, 230, 0.5);
   transition: all 0.3s;
 }
-main div#book_contents div.book_contents_info div.info_buy div.cart button:last-of-type {
+main div#book_contents div.book_contents_info div.info_contents div.buy div.cart button:last-of-type {
   background: #1E9EFF;
   width: 112px;
   height: 48px;
@@ -195,7 +294,7 @@ main div#book_contents div.book_contents_info div.info_buy div.cart button:last-
   border: 1px solid #0077d9;
   border-radius: 6px;
 }
-main div#book_contents div.book_contents_info div.info_buy div.cart button:last-of-type:hover {
+main div#book_contents div.book_contents_info div.info_contents div.buy div.cart button:last-of-type:hover {
   background: #0077d9;
   transition: all 0.3s;
 }
@@ -205,13 +304,16 @@ main div#book_contents div.book_contents_info table.info_ {
   text-align: left;
   border: 3px solid #e6e6e6;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 main div#book_contents div.book_contents_info table.info_ tr {
   line-height: 20px;
 }
 main div#book_contents div.book_contents_info table.info_ tr th {
   font-weight: 900;
+}
+main div#book_contents div.book_contents_info table.info_ tr td span {
+  margin-right: 6px;
 }
 main div#book_contents div.book_contents_info table.info_ tr td:not(.file) span::before {
   margin: 0 3px;

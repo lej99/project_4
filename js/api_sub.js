@@ -16,4 +16,16 @@ $(document).ready(function(){
             a[i].innerHTML += msg.documents[i].title
         };
     });
+
+    // $.ajax({
+    //     method: "GET",
+    //     url: "https://dapi.kakao.com/v3/search/book?target=title",
+    //     data: { query: "잃어버린 시간을 찾아서 13" },
+    //     headers: { Authorization: "KakaoAK 8313893b989950266cb7d14639361dd5" }
+    // }).done(function (msg) {
+
+    //     $('.info_img img.thumbnail').attr("src",msg.documents[0].thumbnail)
+    //     .attr("alt",msg.documents[0].title)
+
+    // });
 });
