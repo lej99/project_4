@@ -467,11 +467,10 @@ main div#book_contents div.book_contents_detail div.data::after {
   left: 670px;
   cursor: pointer;
 }
-main div#book_contents div.book_contents_detail div.book_intro {
-  width: 100%;
-  margin: 60px 0;
-}
-main div#book_contents div.book_contents_detail div.purblisher_review {
+main div#book_contents div.book_contents_detail div.book_intro,
+main div#book_contents div.book_contents_detail div.purblisher_review,
+main div#book_contents div.book_contents_detail div.authors_intro,
+main div#book_contents div.book_contents_detail div.book_list {
   width: 100%;
   margin: 60px 0;
 }
@@ -479,13 +478,109 @@ main div#book_contents div.book_contents_detail div.profile {
   width: 100%;
   margin: 60px 0;
 }
-main div#book_contents div.book_contents_detail div.authors_intro {
-  width: 100%;
-  margin: 60px 0;
+main div#book_contents div.book_contents_detail div.profile p {
+  font-size: 13px;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
-main div#book_contents div.book_contents_detail div.book_list {
-  width: 100%;
-  margin: 60px 0;
+main div#book_contents div.book_contents_detail div.profile p span {
+  margin-right: 10px;
+}
+main div#book_contents div.book_contents_detail div.profile p i {
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background-color: #e6e6e6;
+  margin: 0 10px;
+}
+main div#book_contents div.book_contents_detail div.profile p a {
+  font-weight: 900;
+  padding: 10px 0;
+}
+main div#book_contents div.book_contents_detail div.profile p a.active {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+main div#book_contents div.book_contents_detail div.profile p a:hover {
+  color: #000;
+}
+main div#book_contents div.book_contents_detail div.profile h4 {
+  padding: 20px 0;
+}
+main div#book_contents div.book_contents_detail div.profile h4 a {
+  color: #000;
+  font-weight: 900;
+  font-size: 20px;
+}
+main div#book_contents div.book_contents_detail div.profile h4 a:hover {
+  color: #1E9EFF;
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.profile button.new {
+  border: 1px solid #1E9EFF;
+  border-radius: 6px;
+  width: 170px;
+  height: 30px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+main div#book_contents div.book_contents_detail div.profile button.new span {
+  color: #1E9EFF;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+}
+main div#book_contents div.book_contents_detail div.profile button.new span.one::before {
+  content: "+";
+  font-size: 22px;
+  position: relative;
+  top: -2px;
+}
+main div#book_contents div.book_contents_detail div.profile button.new span.two::before {
+  content: "·";
+  font-size: 20px;
+}
+main div#book_contents div.book_contents_detail div.profile button.new:hover {
+  background: #f7fafc;
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.profile ul {
+  font-size: 13px;
+  margin-top: 15px;
+}
+main div#book_contents div.book_contents_detail div.profile ul li {
+  padding: 2px 0;
+  color: #000;
+}
+main div#book_contents div.book_contents_detail div.profile ul li span:not(.prou) {
+  display: inline-block;
+  width: 30px;
+}
+main div#book_contents div.book_contents_detail div.profile ul li span.prou {
+  margin-right: 4px;
+}
+main div#book_contents div.book_contents_detail div.profile p.edit {
+  text-align: end;
+}
+main div#book_contents div.book_contents_detail div.profile p.edit button.edit {
+  font-weight: 900;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background: #fff;
+  letter-spacing: -0.1rem;
+  padding: 3px 10px;
+}
+main div#book_contents div.book_contents_detail div.profile p.edit button.edit:hover {
+  background: rgba(230, 230, 230, 0.5);
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.profile p.edit button.edit::before {
+  content: "\f304";
+  font: var(--fa-font-solid);
+  font-size: 10px;
+  margin-right: 5px;
 }
 main div#book_contents div.book_contents_detail div.review {
   width: 100%;

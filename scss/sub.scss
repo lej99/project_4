@@ -544,34 +544,134 @@ main {
                 cursor: pointer;
             }
 
-
-            div.book_intro {
+            div.book_intro,
+            div.purblisher_review,
+            div.authors_intro,
+            div.book_list {
                 width: 100%;
                 margin: 60px 0;
-            }
-
-            div.purblisher_review {
-                width: 100%;
-                margin: 60px 0;
-
             }
 
             div.profile {
                 width: 100%;
                 margin: 60px 0;
 
-            }
+                p {
+                    font-size: 13px;
+                    padding: 20px 0 10px 0;
+                    @include underline;
 
-            div.authors_intro {
-                width: 100%;
-                margin: 60px 0;
+                    span {
+                        margin-right: 10px;
+                    }
 
-            }
+                    i {
+                        display: inline-block;
+                        width: 1px;
+                        height: 13px;
+                        background-color: $borderColor;
+                        margin: 0 10px;
+                    }
 
-            div.book_list {
-                width: 100%;
-                margin: 60px 0;
+                    a {
+                        @include fontB;
+                        padding: 10px 0;
+                    }
 
+                    a.active {
+                        color: $titleFontColor;
+                        @include underline($titleFontColor);
+                    }
+
+                    a:hover {
+                        color: $titleFontColor;
+                    }
+                }
+
+                h4 {
+                    padding: 20px 0;
+                    a {
+                        color: $titleFontColor;
+                        @include fontB;
+                        font-size: 20px;
+                    }
+                    a:hover {
+                        color: $lidiColor;
+                        transition: all 0.3s;
+                    }
+                }
+
+                button.new {
+                    @include squareline($lidiColor);
+                    width: 170px;
+                    height: 30px;
+                    background: #fff;
+                    @include flexInline;
+                    justify-content: center;
+
+                    span{
+                        color: $lidiColor;
+                        @include fontB;
+                        @include flexInline;
+                    }
+                    span.one::before {
+                        content: "\002B";
+                        font-size: 22px;
+                        position: relative;
+                        top: -2px;
+                    }
+                    span.two::before {
+                        content: "\00B7";
+                        font-size: 20px;
+                    }
+                    
+                }
+
+                button.new:hover {
+                    background: #f7fafc;
+                    transition: all 0.3s;
+                }
+
+                ul {
+                    font-size: 13px;
+                    margin-top: 15px;
+                    li {
+                        padding: 2px 0;
+                        color: $titleFontColor;
+
+                        span:not(.prou) {
+                            display: inline-block;
+                            width: 30px;
+                        }
+                        span.prou {
+                            margin-right: 4px;
+                        }
+                    }
+                }
+
+                p.edit {
+                    text-align: end;
+
+                    button.edit {
+                        @include fontB;
+                        @include squareline;
+                        background: #fff;
+                        letter-spacing: -0.1rem;
+                        padding: 3px 10px;
+                    }
+
+                    button.edit:hover {
+                        background: rgba($color: $borderColor, $alpha: 0.5);
+                        transition: all 0.3s;
+                    }
+
+                    button.edit::before{
+                        content: "\f304";
+                        font: var(--fa-font-solid);
+                        font-size: 10px;
+                        margin-right: 5px;
+                    }
+                }
             }
 
             div.review {
