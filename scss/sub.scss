@@ -843,6 +843,141 @@ main {
                 width: 100%;
                 margin: 60px 0;
 
+                div.top {
+                    width: 100%;
+                    @include flexBetween;
+
+                    div.buyer_stars {
+                        width: 15%;
+                        margin: 0 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        h6 {
+                            @include fontB;
+                        }
+
+                        h1 {
+                            @include fontB;
+                            color: $titleFontColor;
+                        }
+
+                        div.stars {
+                            width: 70%;
+                            height: 20px;
+                            background: url(../css/img/stars.svg) center center no-repeat;
+                        }
+
+                        ul {
+                            width: 100%;
+                            padding: 5px 0;
+                            @include underline;
+
+                            li {
+                                width: 100%;
+                                padding: 3px 0;
+                                @include flexBetween;
+
+                                span {
+                                    width: 20%;
+                                    @include flexInline;
+                                    font-size: 12px;
+                                    @include fontB;
+
+                                    svg {
+                                        width: 10px;
+                                        height: 10px;
+                                        margin-right: 3px;
+                                    }
+                                }
+
+                                hr {
+                                    width: 75%;
+                                    height: 8px;
+                                    background: $borderColor;
+                                }
+                            }
+                        }
+
+                        h5 {
+                            padding: 5px 0;
+
+                            span {
+                                @include fontB;
+                            }
+                        }
+                    }
+
+                    div.write_review {
+                        width: 80%;
+                        text-align: center;
+                        background: azure;
+
+                        h2 {
+                            @include fontB;
+                            font-size: 18px;
+                        }
+
+                        div.stars {
+                            margin: 10px 0;
+                            span {
+                                display: inline-block;
+                                width: 45px;
+                                height: 45px;
+                                background: url(../css/img/icon_star@2x.png) 50% top no-repeat;
+                                background-size: 45px 90px
+                            }
+
+                            span:hover {
+                                background-position: 50% -45px;
+                            }
+
+                            i {
+                                display: inline-block;
+                                width: 1px;
+                                height: 40px;
+                                background: $borderColor;
+                                margin: 0 6px;
+                            }
+                        }
+
+                        form {
+                            textarea {
+                                font-size: 15px;
+                                @include fontB;
+                                padding: 15px;
+                                width: 100%;
+                                resize: vertical;
+                            }
+
+                            div {
+                                @include flexBetween;
+                                margin: 3px 0;
+
+                                button {
+                                    @include squareline;
+                                    background: #fff;
+                                    @include fontB;
+                                    padding: 5px 15px;
+                                }
+
+                                button:hover {
+                                    background-color: #f7fafc;
+                                    transition: all 0.3s;
+                                }
+
+                                button::before {
+                                    content: "\f071";
+                                    font: var(--fa-font-solid);
+                                    margin-right: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 div.middle {
                     h5 {
                         @include flexBetween;
