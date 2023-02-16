@@ -43,4 +43,28 @@ $(document).ready(function () {
         }
     });
 
+    $('.hee').hide();
+    $('.book_hee').hide();
+    $('.profile > .authors > a').click(function(){
+        $(this).addClass('active');
+        $(this).siblings('a').removeClass('active');
+
+        if($(this).hasClass('marcel')){
+            $('.proust').show();
+            $('.book_proust').show();
+            $('.hee').hide();
+            $('.book_hee').hide();
+        } else {
+            $('.hee').show();
+            $('.book_hee').show();
+            $('.proust').hide();
+            $('.book_proust').hide();
+        }
+    });
+
+    $('section.book  a').click(function(){
+        $(this).addClass('active');
+        $(this).siblings('a').removeClass('active');
+    });
+
 });

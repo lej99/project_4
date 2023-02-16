@@ -141,7 +141,8 @@ main div#book_contents div.book_contents_info div.info_contents ol li a {
   padding-left: 5px;
 }
 main div#book_contents div.book_contents_info div.info_contents ol li:not(:last-child)::after {
-  content: "❯";
+  content: "\f054";
+  font: var(--fa-font-solid);
   color: #000;
   padding-left: 5px;
 }
@@ -197,7 +198,8 @@ main div#book_contents div.book_contents_info div.info_contents p.event a {
   font-weight: 900;
 }
 main div#book_contents div.book_contents_info div.info_contents p.event a::after {
-  content: "❯";
+  content: "\f054";
+  font: var(--fa-font-solid);
   font-size: 12px;
   color: #e6e6e6;
   position: relative;
@@ -407,7 +409,8 @@ main div#book_contents div.book_contents_detail div.set ul li .title {
   align-items: center;
 }
 main div#book_contents div.book_contents_detail div.set ul li .title::after {
-  content: "❯";
+  content: "\f054";
+  font: var(--fa-font-solid);
   color: #e6e6e6;
 }
 main div#book_contents div.book_contents_detail div.set ul li .title:hover::after {
@@ -477,6 +480,149 @@ main div#book_contents div.book_contents_detail div.book_list {
 main div#book_contents div.book_contents_detail div.profile {
   width: 100%;
   margin: 60px 0;
+}
+main div#book_contents div.book_contents_detail div.profile section.book {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+main div#book_contents div.book_contents_detail div.profile section.book h5 {
+  color: #000;
+  font-weight: 900;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main div#book_contents div.book_contents_detail div.profile section.book h5 p {
+  border: none;
+  font-size: 11px;
+  padding: 0;
+}
+main div#book_contents div.book_contents_detail div.profile section.book h5 p a.active {
+  border: none;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li {
+  width: 13%;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  cursor: pointer;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img img {
+  width: 100%;
+  height: auto;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.shadow1 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.shadow2 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.set {
+  position: absolute;
+  left: -1%;
+  bottom: 20%;
+  width: 102%;
+  height: auto;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0) 5%, rgba(120, 120, 120, 0) 95%, rgba(120, 120, 120, 0.5));
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.set p {
+  padding: 5px 0;
+  text-align: center;
+  box-shadow: 1px 3px 3px rgba(120, 120, 120, 0.5);
+  border: none;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.set p span {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 11px;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.set p span::before {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  height: 3px;
+  background-color: #1E9EFF;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.img div.set p span::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #1E9EFF;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li p.title {
+  border: none;
+  font-weight: 900;
+  color: #000;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  max-height: 34px;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 5px;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.stars {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  margin-top: 5px;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.stars svg {
+  width: 11px;
+  height: 11px;
+}
+main div#book_contents div.book_contents_detail div.profile section.book ul li div.stars svg path {
+  color: #e6e6e6;
+}
+main div#book_contents div.book_contents_detail div.profile section.book button.all {
+  position: absolute;
+  left: auto;
+  right: 0;
+  font-weight: 900;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background: #fff;
+  letter-spacing: -0.1rem;
+  padding: 7px 10px;
+}
+main div#book_contents div.book_contents_detail div.profile section.book button.all:hover {
+  background: rgba(230, 230, 230, 0.5);
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.profile section.book button.all::after {
+  content: "\f054";
+  font: var(--fa-font-solid);
+  margin-left: 3px;
 }
 main div#book_contents div.book_contents_detail div.profile p {
   font-size: 13px;
@@ -563,6 +709,7 @@ main div#book_contents div.book_contents_detail div.profile ul li span.prou {
 }
 main div#book_contents div.book_contents_detail div.profile p.edit {
   text-align: end;
+  padding-bottom: 20px;
 }
 main div#book_contents div.book_contents_detail div.profile p.edit button.edit {
   font-weight: 900;
@@ -590,9 +737,162 @@ main div#book_contents div.book_contents_detail div.buy_together {
   width: 100%;
   margin: 60px 0;
 }
+main div#book_contents div.book_contents_detail div.buy_together ul {
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li {
+  width: 13%;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  cursor: pointer;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img img {
+  width: 100%;
+  height: auto;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.shadow1 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.shadow2 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.set {
+  position: absolute;
+  left: -1%;
+  bottom: 20%;
+  width: 102%;
+  height: auto;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0) 5%, rgba(120, 120, 120, 0) 95%, rgba(120, 120, 120, 0.5));
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.set p {
+  padding: 5px 0;
+  text-align: center;
+  box-shadow: 1px 3px 3px rgba(120, 120, 120, 0.5);
+  border: none;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.set p span {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 11px;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.set p span::before {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  height: 3px;
+  background-color: #1E9EFF;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li div.img div.set p span::after {
+  content: "";
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #1E9EFF;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li p.title {
+  font-weight: 900;
+  font-size: 12px;
+  color: #000;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-height: 34px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+main div#book_contents div.book_contents_detail div.buy_together ul li p.author {
+  font-size: 11px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-height: 34px;
+  overflow: hidden;
+  margin-top: 5px;
+}
 main div#book_contents div.book_contents_detail div.read_together {
   width: 100%;
   margin: 60px 0;
+}
+main div#book_contents div.book_contents_detail div.read_together ul {
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main div#book_contents div.book_contents_detail div.read_together ul li {
+  width: 13%;
+}
+main div#book_contents div.book_contents_detail div.read_together ul li div.img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  cursor: pointer;
+}
+main div#book_contents div.book_contents_detail div.read_together ul li div.img img {
+  width: 100%;
+  height: auto;
+}
+main div#book_contents div.book_contents_detail div.read_together ul li div.img div.shadow1 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_detail div.read_together ul li div.img div.shadow2 {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to left, rgba(120, 120, 120, 0.5), rgba(120, 120, 120, 0));
+}
+main div#book_contents div.book_contents_detail div.read_together ul li p.title {
+  font-weight: 900;
+  font-size: 12px;
+  color: #000;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-height: 34px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+main div#book_contents div.book_contents_detail div.read_together ul li p.author {
+  font-size: 11px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-height: 34px;
+  overflow: hidden;
+  margin-top: 5px;
 }
 main div#add {
   width: 207px;
