@@ -733,6 +733,92 @@ main div#book_contents div.book_contents_detail div.review {
   width: 100%;
   margin: 60px 0;
 }
+main div#book_contents div.book_contents_detail div.review div.middle h5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.5);
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.catego a {
+  font-size: 15px;
+  font-weight: 900;
+  padding: 10px 0;
+  margin-right: 15px;
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.catego a:hover {
+  color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.catego a.select {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.soon a {
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.soon a:hover {
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.soon a.select {
+  color: #000;
+}
+main div#book_contents div.book_contents_detail div.review div.middle h5 p.soon i {
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background-color: #e6e6e6;
+  margin: 0 10px;
+}
+main div#book_contents div.book_contents_detail div.review div.middle p.view {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 900;
+  border-bottom: 1px solid #e6e6e6;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom h6 {
+  font-size: 13px;
+  padding: 15px 0;
+  cursor: pointer;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom h6:hover {
+  color: #000;
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom h6::after {
+  content: "\f103";
+  font: var(--fa-font-solid);
+  font-size: 10px;
+  padding-left: 5px;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom h6.click::after {
+  content: "\f102";
+  font: var(--fa-font-solid);
+  font-size: 10px;
+  padding-left: 5px;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom ul {
+  background: #f6f6f6;
+  border-radius: 3px;
+  padding: 25px 30px;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom ul li {
+  padding: 5px 0;
+  font-size: 13px;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom ul li p.first {
+  color: #000;
+}
+main div#book_contents div.book_contents_detail div.review div.bottom ul li p {
+  font-weight: 900;
+}
 main div#book_contents div.book_contents_detail div.buy_together {
   width: 100%;
   margin: 60px 0;

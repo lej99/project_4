@@ -843,6 +843,117 @@ main {
                 width: 100%;
                 margin: 60px 0;
 
+                div.middle {
+                    h5 {
+                        @include flexBetween;
+                        padding: 10px 0;
+                        border-bottom: 2px solid rgba($fontColor, 0.5);
+
+                        p.catego {
+                            
+                            a {
+                                font-size: 15px;
+                                @include fontB;
+                                padding: 10px 0;
+                                margin-right: 15px;
+                            }
+
+                            a:hover {
+                                color: rgba($titleFontColor, 0.8);
+                                border-bottom: 2px solid rgba($color: $titleFontColor, $alpha: 0.8);
+                                transition: all 0.3s;
+                            }
+
+                            a.select {
+                                color: $titleFontColor;
+                                border-bottom: 2px solid $titleFontColor;
+                            }
+                        }
+
+                        p.soon {
+
+                            a {
+                                @include fontB;
+                            }
+
+                            a:hover {
+                                color: rgba($titleFontColor, 0.8);
+                                transition: all 0.3s;
+                            }
+
+                            a.select {
+                                color: $titleFontColor;
+                            }
+                                
+                            i {
+                                display: inline-block;
+                                width: 1px;
+                                height: 11px;
+                                background-color: $borderColor;
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+
+                    p.view {
+                        width: 100%;
+                        height: 150px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        line-height: 25px;
+                        @include fontB;
+                        @include underline;
+                    }
+                }
+
+                div.bottom {
+
+                    h6 {
+                        font-size: 13px;
+                        padding: 15px 0;
+                        cursor: pointer;
+                    }
+
+                    h6:hover {
+                        color: $titleFontColor;
+                        transition: all 0.3s;
+                    }
+
+                    h6::after{
+                        content: "\f103";
+                        font: var(--fa-font-solid);
+                        font-size: 10px;
+                        padding-left: 5px;
+                    }
+
+                    h6.click::after{
+                        content: "\f102";
+                        font: var(--fa-font-solid);
+                        font-size: 10px;
+                        padding-left: 5px;
+                    }
+
+                    ul {
+                        background: #f6f6f6;
+                        border-radius: 3px;
+                        padding: 25px 30px;
+
+                        li {
+                            padding: 5px 0;
+                            font-size: 13px;
+
+                            p.first{
+                                color: $titleFontColor;
+                            }
+
+                            p {
+                                @include fontB;
+                            }
+                        }
+                    }
+                }
             }
 
             div.buy_together {

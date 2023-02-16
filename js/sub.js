@@ -67,4 +67,26 @@ $(document).ready(function () {
         $(this).siblings('a').removeClass('active');
     });
 
+    
+    $('.middle .catego > a').click(function(){
+        $(this).addClass('select');
+        $(this).siblings('a').removeClass('select');
+        if ($(this).hasClass('buyer')){
+            $('.buyer_select').show();
+        } else {
+            $('.buyer_select').hide();
+        }
+    });
+
+    $('.middle .soon > a').click(function(){
+        $(this).addClass('select');
+        $(this).siblings('a').removeClass('select');
+    });
+
+    $('.review > .bottom > ul').hide();
+    $('.review > .bottom > h6').click(function(){
+        $(this).toggleClass('click');
+        $(this).siblings('ul').slideToggle();
+    });
+
 });
