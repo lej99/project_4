@@ -37,7 +37,6 @@ $(document).ready(function () {
         data: { query: '마르셀 프루스트' },
         headers: { Authorization: "KakaoAK 8313893b989950266cb7d14639361dd5" }
     }).done(function (msg) {
-        console.log(msg);
         for (var i = 0; i < 8; i++) {
             $('section.book .book_proust .img .thumbnail').eq(i).attr("src", msg.documents[i].thumbnail, "alt", msg.documents[i].title);
             $('section.book .book_proust .title').eq(i).text(msg.documents[i].title);
@@ -50,7 +49,6 @@ $(document).ready(function () {
         data: { query: '민음사' },
         headers: { Authorization: "KakaoAK 8313893b989950266cb7d14639361dd5" }
     }).done(function (msg) {
-        console.log(msg);
         for (var i = 0; i < 8; i++) {
             $('section.book .book_hee .img .thumbnail').eq(i).attr("src", msg.documents[i].thumbnail, "alt", msg.documents[i].title);
             $('section.book .book_hee .title').eq(i).text(msg.documents[i].title);
@@ -77,7 +75,6 @@ $(document).ready(function () {
         data: { query: '민음사' },
         headers: { Authorization: "KakaoAK 8313893b989950266cb7d14639361dd5" }
     }).done(function (msg) {
-        console.log(msg);
         for (var i = 0; i < 8; i++) {
             $('.read_together_one .img .thumbnail').eq(i).attr("src", msg.documents[i].thumbnail, "alt", msg.documents[i].title);
             $('.read_together_one .title').eq(i).text(msg.documents[i].title);

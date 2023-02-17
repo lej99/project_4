@@ -845,11 +845,12 @@ main {
 
                 div.top {
                     width: 100%;
-                    @include flexBetween;
+                    @include flexBetween(flex-start);
+                    margin: 30px 0;
 
                     div.buyer_stars {
                         width: 15%;
-                        margin: 0 10px;
+                        margin: 10px;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -911,27 +912,54 @@ main {
                     }
 
                     div.write_review {
-                        width: 80%;
+                        width: 85%;
                         text-align: center;
-                        background: azure;
+                        position: relative;
 
                         h2 {
                             @include fontB;
                             font-size: 18px;
                         }
 
+                        div.pop {
+                            position: absolute;
+                            top: -3%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            
+                            span {
+                                display: inline-block;
+                                width: 110px;
+                                height: 30px;
+                                line-height: 30px;
+                                background-color: $lidiColor;
+                                border-radius: 6px;
+                                color: #fff;
+                                @include fontB;
+                                font-size: 14px;
+                            }
+                            span::after {
+                                position: absolute;
+                                bottom: -5px;
+                                right: 50%;
+                                transform: translateX(50%) rotate(45deg);
+                                content: "";
+                                display: inline-block;
+                                width: 10px;
+                                height: 10px;
+                                background-color: $lidiColor;
+                            }
+
+                        }
+
                         div.stars {
                             margin: 10px 0;
                             span {
                                 display: inline-block;
-                                width: 45px;
+                                width: 57px;
                                 height: 45px;
                                 background: url(../css/img/icon_star@2x.png) 50% top no-repeat;
-                                background-size: 45px 90px
-                            }
-
-                            span:hover {
-                                background-position: 50% -45px;
+                                background-size: 45px 90px;
                             }
 
                             i {
@@ -939,41 +967,118 @@ main {
                                 width: 1px;
                                 height: 40px;
                                 background: $borderColor;
-                                margin: 0 6px;
                             }
                         }
 
                         form {
+                            margin-bottom: 5px;
+
                             textarea {
                                 font-size: 15px;
                                 @include fontB;
                                 padding: 15px;
                                 width: 100%;
                                 resize: vertical;
+                                border: 2px solid $borderColor;
+                                border-radius: 6px;
+                                outline: none;
                             }
 
                             div {
                                 @include flexBetween;
                                 margin: 3px 0;
 
-                                button {
+                                button.review_warning {
                                     @include squareline;
                                     background: #fff;
                                     @include fontB;
                                     padding: 5px 15px;
                                 }
 
-                                button:hover {
+                                button.review_warning:hover {
                                     background-color: #f7fafc;
                                     transition: all 0.3s;
                                 }
 
-                                button::before {
+                                button.review_warning::before {
                                     content: "\f071";
                                     font: var(--fa-font-solid);
                                     margin-right: 3px;
                                 }
+
+                                div {
+                                    div.spoiler {
+                                        opacity: 0.6;
+                                        
+                                        input {
+                                            width: 18px;
+                                            height: 18px;
+                                            @include squareline;
+                                            background-color: transparent;
+                                            cursor: pointer;
+                                            margin-right: 6px;
+                                        }
+
+                                        label {
+                                            color: #333;
+                                            cursor: pointer;
+                                            font-size: 14px;
+                                            @include fontB;
+                                        }
+                                        
+                                    }
+                                    div.spoiler:hover {
+                                        opacity: 1;
+                                        transition: all 0.3s;
+                                    }
+                                    div.spoiler.click {
+                                        opacity: 1;
+                                    }
+
+                                    button.review_enter {
+                                        @include squareline(#0077d9);
+                                        @include fontB;
+                                        color: #fff;
+                                        background: $lidiColor;
+                                        font-size: 14px;
+                                        padding: 5px 15px;
+                                        opacity: 0.6;
+                                        margin-left: 15px;
+                                        cursor: auto;
+                                    }
+                                }
                             }
+                        }
+
+                        ul.warning {
+                            background: #f6f6f6;
+                            border-radius: 3px;
+                            padding: 25px;
+                            text-align: start;
+
+                        li {
+                            font-size: 13px;
+
+                            p{
+                                color: $titleFontColor;
+                                @include fontB;
+                            }
+
+                            ol {
+                                padding: 15px 10px;
+
+                                li {
+                                    padding: 1px 0;
+                                }
+                                li:not(:last-child) {
+                                    list-style: roman;
+                                }
+                                li:last-child {
+                                    margin-left: -13px;
+                                }
+                                
+                            }
+                        }
                         }
                     }
                 }

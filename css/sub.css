@@ -737,11 +737,12 @@ main div#book_contents div.book_contents_detail div.review div.top {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin: 30px 0;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.buyer_stars {
   width: 15%;
-  margin: 0 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -795,33 +796,60 @@ main div#book_contents div.book_contents_detail div.review div.top div.buyer_sta
   font-weight: 900;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review {
-  width: 80%;
+  width: 85%;
   text-align: center;
-  background: azure;
+  position: relative;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review h2 {
   font-weight: 900;
   font-size: 18px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review div.pop {
+  position: absolute;
+  top: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review div.pop span {
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #1E9EFF;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 14px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review div.pop span::after {
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  transform: translateX(50%) rotate(45deg);
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #1E9EFF;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review div.stars {
   margin: 10px 0;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review div.stars span {
   display: inline-block;
-  width: 45px;
+  width: 57px;
   height: 45px;
   background: url(../css/img/icon_star@2x.png) 50% top no-repeat;
   background-size: 45px 90px;
-}
-main div#book_contents div.book_contents_detail div.review div.top div.write_review div.stars span:hover {
-  background-position: 50% -45px;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review div.stars i {
   display: inline-block;
   width: 1px;
   height: 40px;
   background: #e6e6e6;
-  margin: 0 6px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form {
+  margin-bottom: 5px;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review form textarea {
   font-size: 15px;
@@ -829,6 +857,9 @@ main div#book_contents div.book_contents_detail div.review div.top div.write_rev
   padding: 15px;
   width: 100%;
   resize: vertical;
+  border: 2px solid #e6e6e6;
+  border-radius: 6px;
+  outline: none;
 }
 main div#book_contents div.book_contents_detail div.review div.top div.write_review form div {
   display: flex;
@@ -836,21 +867,83 @@ main div#book_contents div.book_contents_detail div.review div.top div.write_rev
   align-items: center;
   margin: 3px 0;
 }
-main div#book_contents div.book_contents_detail div.review div.top div.write_review form div button {
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div button.review_warning {
   border: 1px solid #e6e6e6;
   border-radius: 6px;
   background: #fff;
   font-weight: 900;
   padding: 5px 15px;
 }
-main div#book_contents div.book_contents_detail div.review div.top div.write_review form div button:hover {
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div button.review_warning:hover {
   background-color: #f7fafc;
   transition: all 0.3s;
 }
-main div#book_contents div.book_contents_detail div.review div.top div.write_review form div button::before {
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div button.review_warning::before {
   content: "\f071";
   font: var(--fa-font-solid);
   margin-right: 3px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div div div.spoiler {
+  opacity: 0.6;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div div div.spoiler input {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 6px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div div div.spoiler label {
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div div div.spoiler:hover {
+  opacity: 1;
+  transition: all 0.3s;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div div div.spoiler.click {
+  opacity: 1;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review form div div button.review_enter {
+  border: 1px solid #0077d9;
+  border-radius: 6px;
+  font-weight: 900;
+  color: #fff;
+  background: #1E9EFF;
+  font-size: 14px;
+  padding: 5px 15px;
+  opacity: 0.6;
+  margin-left: 15px;
+  cursor: auto;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning {
+  background: #f6f6f6;
+  border-radius: 3px;
+  padding: 25px;
+  text-align: start;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning li {
+  font-size: 13px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning li p {
+  color: #000;
+  font-weight: 900;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning li ol {
+  padding: 15px 10px;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning li ol li {
+  padding: 1px 0;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning li ol li:not(:last-child) {
+  list-style: roman;
+}
+main div#book_contents div.book_contents_detail div.review div.top div.write_review ul.warning li ol li:last-child {
+  margin-left: -13px;
 }
 main div#book_contents div.book_contents_detail div.review div.middle h5 {
   display: flex;

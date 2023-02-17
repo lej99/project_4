@@ -67,6 +67,54 @@ $(document).ready(function () {
         $(this).siblings('a').removeClass('active');
     });
 
+    $('div.pop').hide();
+    $('.write_review>.stars>span').hover(function(){
+        $('.write_review>h2').css('opacity','0');
+        $('div.pop').show();
+        $(this).css('background-position', '50% -45px');
+        $(this).prevAll().css('background-position', '50% -45px');
+
+        if ($(this).index() == 0){
+            $('div.pop>span').text('별로예요');
+        } else if ($(this).index() == 2){
+            $('div.pop>span').text('그저 그래요');
+        } else if ($(this).index() == 4){
+            $('div.pop>span').text('보통이에요');
+        } else if ($(this).index() == 6){
+            $('div.pop>span').text('좋아요');
+        } else if ($(this).index() == 8){
+            $('div.pop>span').text('최고예요');
+        };
+    },function(){
+        $('.write_review>h2').css('opacity','1');
+        $('div.pop').hide();
+        $(this).css('background-position', '50% top');
+        $(this).prevAll().css('background-position', '50% top');
+        $('div.pop>span').text('');
+    });
+
+    $('.write_review>form>textarea').click(function(){
+        confirm('로그인 상태에서 가능합니다. 로그인 페이지로 이동합니다.');
+    });
+
+    $('ul.warning').hide();
+    $('.review > .top button.review_warning').click(function(){
+        if($('ul.warning').css('display')=='none'){
+            $('ul.warning').show();
+        } else {
+            $('ul.warning').hide();
+        }
+    });
+
+    $('.review > .top div.spoiler').click(function(){
+        $(this).toggleClass('click');
+    });
+
+    var $spoiler = document.querySelector('div.spoiler');
+    $spoiler.querySelector('label').addEventListener('click', function(event) {
+        event.stopPropagation(); // 이벤트 차단
+        $spoiler.toggleClass('click');
+    });
     
     $('.middle .catego > a').click(function(){
         $(this).addClass('select');
