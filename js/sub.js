@@ -5,10 +5,10 @@ $(document).ready(function () {
         var now = new Date().getTime();
         var distance = countDownDate - now;
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        $(".timer").html(hours + "시간 남음");
+        document.querySelector(".timer").innerHTML= hours + "시간 남음"
         if (distance < 0) {
             clearInterval(x);
-            $(".timer").html("지났어용");
+            document.querySelector(".timer").innerHTML="지났어용"
         }
     }, 1000);
 
@@ -20,7 +20,6 @@ $(document).ready(function () {
         $('body').css('overflow','hidden');
     });
     
-    $('.modal').hide();
     $('.modal').click(function(){
         $(this).hide();
         $('.modal img').attr('src','','alt','')
@@ -37,9 +36,22 @@ $(document).ready(function () {
         if($(this).parent('div').hasClass('plus')){
             $(this).css({'overflow':'visible','height':'auto'});
             $(this).parent('div').removeClass('plus');
+            $(this).siblings('button').addClass('plus');
         } else {
             $(this).css({'overflow':'hidden','height':'200px'});
             $(this).parent('div').addClass('plus');
+            $(this).siblings('button').removeClass('plus');
+        }
+    });
+    $('.data_btn').click(function(){
+        if($(this).parent('div').hasClass('plus')){
+            $(this).siblings('.data').css({'overflow':'visible','height':'auto'});
+            $(this).parent('div').removeClass('plus');
+            $(this).addClass('plus');
+        } else {
+            $(this).siblings('.data').css({'overflow':'hidden','height':'200px'});
+            $(this).parent('div').addClass('plus');
+            $(this).removeClass('plus');
         }
     });
 
@@ -106,14 +118,12 @@ $(document).ready(function () {
         }
     });
 
-    $('.review > .top div.spoiler').click(function(){
-        $(this).toggleClass('click');
-    });
-
     var $spoiler = document.querySelector('div.spoiler');
+    $spoiler.addEventListener('click', function() {
+        $spoiler.classList.toggle('click');
+    });
     $spoiler.querySelector('label').addEventListener('click', function(event) {
-        event.stopPropagation(); // 이벤트 차단
-        $spoiler.toggleClass('click');
+        event.stopPropagation();
     });
     
     $('.middle .catego > a').click(function(){

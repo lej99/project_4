@@ -438,15 +438,26 @@ main div#book_contents div.book_contents_detail div.set button:hover {
   background: rgba(230, 230, 230, 0.5);
   transition: all 0.3s;
 }
-main div#book_contents div.book_contents_detail div.plus::after {
+main div#book_contents div.book_contents_detail button.data_btn::after {
   content: "펼쳐보기 \f13a";
   font: var(--fa-font-solid);
   font-size: 13px;
   color: #0077d9;
+}
+main div#book_contents div.book_contents_detail button.data_btn {
   position: relative;
-  bottom: 0;
   left: 670px;
-  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+main div#book_contents div.book_contents_detail button.plus::after {
+  content: "접기 \f139";
+  font: var(--fa-font-solid);
+  font-size: 13px;
+  color: #0077d9;
+  position: relative;
+  left: 20px;
 }
 main div#book_contents div.book_contents_detail div.data {
   width: 100%;
@@ -459,16 +470,6 @@ main div#book_contents div.book_contents_detail div.data {
 }
 main div#book_contents div.book_contents_detail div.data pre {
   color: #000;
-}
-main div#book_contents div.book_contents_detail div.data::after {
-  content: "접기 \f139";
-  font: var(--fa-font-solid);
-  font-size: 13px;
-  color: #0077d9;
-  position: relative;
-  bottom: 0;
-  left: 670px;
-  cursor: pointer;
 }
 main div#book_contents div.book_contents_detail div.book_intro,
 main div#book_contents div.book_contents_detail div.purblisher_review,
