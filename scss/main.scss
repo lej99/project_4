@@ -536,7 +536,6 @@ main {
                         color: $titleFontColor;
                         @include fontB;
                         text-overflow: ellipsis;
-                        white-space:wrap;
                         overflow: hidden;
                         padding: 10px 0;
                     }
@@ -886,7 +885,6 @@ main {
                         color: $titleFontColor;
                         @include fontB;
                         text-overflow: ellipsis;
-                        white-space:wrap;
                         overflow: hidden;
                         padding: 10px 0;
                     }

@@ -572,13 +572,20 @@ main {
                         font-size: 16px;
                         @include flexBetween;
 
-                        p {
-                            border: none;
+                        span {
                             font-size: 11px;
-                            padding: 0;
 
                             a.active {
-                                border: none;
+                                @include fontB;
+                                color: $titleFontColor;
+                            }
+
+                            i {
+                                display: inline-block;
+                                width: 1px;
+                                height: 11px;
+                                background-color: $borderColor;
+                                margin: 0 10px;
                             }
                         }
                     }
@@ -1091,7 +1098,7 @@ main {
                         padding: 10px 0;
                         border-bottom: 2px solid rgba($fontColor, 0.5);
 
-                        p.catego {
+                        span.catego {
                             
                             a {
                                 font-size: 15px;
@@ -1112,7 +1119,7 @@ main {
                             }
                         }
 
-                        p.soon {
+                        span.soon {
 
                             a {
                                 @include fontB;

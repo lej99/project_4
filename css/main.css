@@ -461,7 +461,6 @@ main section#new div#new_books ul li h4.title {
   color: #000;
   font-weight: 900;
   text-overflow: ellipsis;
-  white-space: wrap;
   overflow: hidden;
   padding: 10px 0;
 }
@@ -756,7 +755,6 @@ main section#health div#health_books ul li h4.title {
   color: #000;
   font-weight: 900;
   text-overflow: ellipsis;
-  white-space: wrap;
   overflow: hidden;
   padding: 10px 0;
 }
