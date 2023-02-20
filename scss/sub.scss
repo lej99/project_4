@@ -86,7 +86,7 @@ main {
                                 display: inline-block;
                                 width: 30%;
                                 height: 3px;
-                                background-color: $lidiColor;
+                                background-color: $ridiColor;
                             }
 
                             span::after {
@@ -94,7 +94,7 @@ main {
                                 display: inline-block;
                                 width: 30%;
                                 height: 3px;
-                                background-color: $lidiColor;
+                                background-color: $ridiColor;
                             }
                         }
                     }
@@ -121,13 +121,13 @@ main {
                 }
 
                 button {
-                    @include squareline($lidiColor);
+                    @include squareline($ridiColor);
                     @include fontB;
                     font-size: 14px;
                     width: 130px;
                     height: 39px;
                     background: #fff;
-                    color: $lidiColor;
+                    color: $ridiColor;
                     margin-top: 15px;
                 }
 
@@ -141,7 +141,7 @@ main {
                 width: 65%;
 
                 a:hover {
-                    color: $lidiColor;
+                    color: $ridiColor;
                     transition: all 0.3s;
                 }
 
@@ -290,7 +290,7 @@ main {
                             span {
                                 color: $pointColor;
                             }
-                            color: $lidiColor;
+                            color: $ridiColor;
                         }
                     }
                 }
@@ -332,7 +332,7 @@ main {
                         }
     
                         button:last-of-type {
-                            background: $lidiColor;
+                            background: $ridiColor;
                             width: 112px;
                             height: 48px;
                             font-size: 15px;
@@ -478,7 +478,7 @@ main {
                             color: $borderColor;
                         }
                         .title:hover::after {
-                            color: $lidiColor;
+                            color: $ridiColor;
                             transition: all 0.3s;
                         }
                     }
@@ -494,7 +494,7 @@ main {
 
                     span {
                         @include fontB;
-                        color: $lidiColor;
+                        color: $ridiColor;
                     }
                 }
                 
@@ -661,7 +661,7 @@ main {
                                             display: inline-block;
                                             width: 25%;
                                             height: 3px;
-                                            background-color: $lidiColor;
+                                            background-color: $ridiColor;
                                         }
             
                                         span::after {
@@ -669,7 +669,7 @@ main {
                                             display: inline-block;
                                             width: 20%;
                                             height: 3px;
-                                            background-color: $lidiColor;
+                                            background-color: $ridiColor;
                                         }
                                     }
                                 }
@@ -769,13 +769,13 @@ main {
                         font-size: 20px;
                     }
                     a:hover {
-                        color: $lidiColor;
+                        color: $ridiColor;
                         transition: all 0.3s;
                     }
                 }
 
                 button.new {
-                    @include squareline($lidiColor);
+                    @include squareline($ridiColor);
                     width: 170px;
                     height: 30px;
                     background: #fff;
@@ -783,7 +783,7 @@ main {
                     justify-content: center;
 
                     span{
-                        color: $lidiColor;
+                        color: $ridiColor;
                         @include fontB;
                         @include flexInline;
                     }
@@ -941,7 +941,7 @@ main {
                                 width: 110px;
                                 height: 30px;
                                 line-height: 30px;
-                                background-color: $lidiColor;
+                                background-color: $ridiColor;
                                 border-radius: 6px;
                                 color: #fff;
                                 @include fontB;
@@ -956,7 +956,7 @@ main {
                                 display: inline-block;
                                 width: 10px;
                                 height: 10px;
-                                background-color: $lidiColor;
+                                background-color: $ridiColor;
                             }
 
                         }
@@ -1048,7 +1048,7 @@ main {
                                         @include squareline(#0077d9);
                                         @include fontB;
                                         color: #fff;
-                                        background: $lidiColor;
+                                        background: $ridiColor;
                                         font-size: 14px;
                                         padding: 5px 15px;
                                         opacity: 0.6;
@@ -1280,7 +1280,7 @@ main {
                                         display: inline-block;
                                         width: 25%;
                                         height: 3px;
-                                        background-color: $lidiColor;
+                                        background-color: $ridiColor;
                                     }
         
                                     span::after {
@@ -1288,7 +1288,7 @@ main {
                                         display: inline-block;
                                         width: 20%;
                                         height: 3px;
-                                        background-color: $lidiColor;
+                                        background-color: $ridiColor;
                                     }
                                 }
                             }
@@ -1442,7 +1442,7 @@ main {
                     }
 
                     a:hover {
-                        color: $lidiColor;
+                        color: $ridiColor;
                         transition: all 0.3s;
                     }
                 }

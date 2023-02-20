@@ -96,7 +96,7 @@ header {
                     outline: none;
                     border: none;
                     background-color: #f0f0f0;
-                    caret-color: $lidiColor;
+                    caret-color: $ridiColor;
                 }
             }
 
@@ -184,7 +184,7 @@ header {
         height: 60px;
         
         .books {
-            color: $lidiColor;
+            color: $ridiColor;
             font-size: 23px;
             @include fontB;
         }
@@ -218,7 +218,7 @@ header {
             @include fontB;
         }
         a.recommend {
-            background-color: $lidiColor;
+            background-color: $ridiColor;
             border-radius: 30px;
             color: #fff;
         }
@@ -303,7 +303,7 @@ header {
                                 margin-left: 6px;
 
                                 circle {
-                                    color: $lidiColor;
+                                    color: $ridiColor;
                                 }
                             }
                         }
@@ -374,7 +374,7 @@ header {
                     }
                 }
 
-                .lidicorp {
+                .ridicorp {
                     font-size: 11px;
                     padding: 10px 0;
                     span {
