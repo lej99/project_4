@@ -2,6 +2,10 @@
 
 @import 'reset', 'color', 'mixin';
 
+body {
+    background-color: #fff;
+}
+
 #top_menu_wrap {
     width: 100%;
     height: auto;
